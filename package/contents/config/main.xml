@@ -33,10 +33,10 @@
         <entry name="geoclueLocationEnabled" type="Bool">
             <default>false</default>
         </entry>
-        <entry name="latitude" type="Double">
+        <entry name="latitude" type="String">
             <default>50.0</default>
         </entry>
-        <entry name="longitude" type="Double">
+        <entry name="longitude" type="String">
             <default>7.0</default>
         </entry>
         
@@ -48,10 +48,10 @@
         </entry>
         
         <entry name="dayBrightness" type="Double">
-            <default>1</default>
+            <default>1.0</default>
         </entry>
         <entry name="nightBrightness" type="Double">
-            <default>1</default>
+            <default>1.0</default>
         </entry>
         
         <entry name="gammaR" type="Double">

@@ -3,11 +3,14 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.2
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
 
-Item {
+KCM.SimpleKCM {
 
     property alias cfg_autostart: autostart.checked
     property alias cfg_smoothTransitions: smoothTransitions.checked
@@ -17,77 +20,71 @@ Item {
     property string cfg_iconActive: plasmoid.configuration.iconActive
     property string cfg_iconInactive: plasmoid.configuration.iconInactive
 
-    Label {
-        text: i18n("Plasmoid version") + ": 1.0.18"
-        anchors.right: parent.right
-    }
-
-    GridLayout {
+    Kirigami.FormLayout {
         Layout.fillWidth: true
-        columns: 2
+        ButtonGroup {
+            id: viewGroup
+        }
 
         CheckBox {
             id: autostart
-            text: i18n("Autostart")
-            Layout.columnSpan: 2
+            Kirigami.FormData.label: i18n("Autostart")
+        }
+
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
         }
 
         CheckBox {
             id: smoothTransitions
-            text: i18n("Smooth transitions")
-            Layout.columnSpan: 2
+            Kirigami.FormData.label: i18n("Smooth transitions")
         }
 
-        Item {
-            width: 2
-            height: 10
-            Layout.columnSpan: 2
-        }
-
-        Label {
-            text: i18n("Manual temperature step:")
-            Layout.alignment: Qt.AlignRight
-        }
         SpinBox {
+            Kirigami.FormData.label: i18n("Manual temperature step:")
             id: manualTemperatureStep
-            Layout.minimumWidth: iconActivePicker.width
-            decimals: 0
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //decimals: 0
             stepSize: 125
-            minimumValue: 25
-            maximumValue: 5000
+            from: 25
+            to: 5000
+            enabled: smoothTransitions.checked
         }
 
-        Label {
-            text: i18n("Manual brightness step:")
-            Layout.alignment: Qt.AlignRight
-        }
-        SpinBox {
+        /*SpinBox {
             id: manualBrightnessStep
             Layout.minimumWidth: iconActivePicker.width
             decimals: 2
             stepSize: 0.01
             minimumValue: 0.01
             maximumValue: 0.2
+        }*/
+        CoolSpinBox {
+            Kirigami.FormData.label: i18n("Manual brightness step:")
+            id: manualBrightnessStep
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            configKey: "manualBrightnessStep"
+            decimals: 2
+            minimumValue: 0.01
+            maximumValue: 0.2
+            stepSize: Math.round(0.01 * factor)
+            enabled: smoothTransitions.checked
         }
 
-        Item {
-            width: 2
-            height: 10
-            Layout.columnSpan: 2
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
         }
 
         CheckBox {
             id: useDefaultIcons
-            text: i18n("Use default icons")
+            Kirigami.FormData.label: i18n("Use default icons")
             Layout.columnSpan: 2
         }
 
-        Label {
-            text: i18n("Active:")
-            Layout.alignment: Qt.AlignRight
-        }
-
         IconPicker {
+            Kirigami.FormData.label: i18n("Active:")
             id: iconActivePicker
             currentIcon: cfg_iconActive
             defaultIcon: 'redshift-status-on'
@@ -95,17 +92,31 @@ Item {
             enabled: !useDefaultIcons.checked
         }
 
-        Label {
-            text: i18n("Inactive:")
-            Layout.alignment: Qt.AlignRight
-        }
-
         IconPicker {
+            Kirigami.FormData.label: i18n("Inactive:")
             currentIcon: cfg_iconInactive
             defaultIcon: 'redshift-status-off'
             onIconChanged: cfg_iconInactive = iconName
             enabled: !useDefaultIcons.checked
         }
-    }
 
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
+
+        RowLayout {
+            width : parent.width
+            spacing : 2
+            Layout.alignment: Qt.AlignRight
+            Label {
+                text : i18n("Plasmoid version") + ": "
+                verticalAlignment : Text.AlignVCenter
+                font.bold : true
+            }
+            Label {
+                text : Plasmoid.metaData.version
+                verticalAlignment : Text.AlignVCenter
+            }
+        }
+    }
 }

@@ -9,12 +9,12 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
          name: i18n("General")
-         icon: "preferences-system-windows"
+         icon: "preferences"
          source: "config/ConfigGeneral.qml"
     }
     ConfigCategory {
          name: i18n("Advanced")
-         icon: "redshift"
+         icon: "preferences-desktop"
          source: "config/ConfigAdvanced.qml"
     }
 }

@@ -3,12 +3,14 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtGraphicalEffects 1.0
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick
+import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.plasma5support as Plasma5Support
+import org.kde.kirigami as Kirigami
 
 Item {
     id: compactRepresentation
@@ -29,9 +31,9 @@ Item {
     property int brightnessMin: 10
     property int brightnessMax: 100
 
-    property bool textColorLight: ((theme.textColor.r + theme.textColor.g + theme.textColor.b) / 3) > 0.5
-    property color bulbIconColourActive: theme.textColor
-    property color bulbIconColourInactive: textColorLight ? Qt.tint(theme.textColor, '#80000000') : Qt.tint(theme.textColor, '#80FFFFFF')
+    property bool textColorLight: ((Kirigami.Theme.textColor.r + Kirigami.Theme.textColor.g + Kirigami.Theme.textColor.b) / 3) > 0.5
+    property color bulbIconColourActive: Kirigami.Theme.textColor
+    property color bulbIconColourInactive: textColorLight ? Qt.tint(Kirigami.Theme.textColor, '#80000000') : Qt.tint(Kirigami.Theme.textColor, '#80FFFFFF')//textColorLight ? '#80000000' : '#80FFFFFF'
     property color bulbIconColourCurrent: active ? bulbIconColourActive : bulbIconColourInactive
     property string customIconSource: active ? plasmoid.configuration.iconActive : plasmoid.configuration.iconInactive
     property color redshiftColour: '#ff3c0b'
@@ -39,7 +41,7 @@ Item {
 
     property string versionString: 'N/A'
 
-    PlasmaCore.IconItem {
+    Kirigami.Icon {
         id: customIcon
         anchors.fill: parent
         visible: !plasmoid.configuration.useDefaultIcons
@@ -72,7 +74,7 @@ Item {
         font.family: 'FontAwesome'
         text: '\uf04c'
 
-        color: textColorLight ? Qt.tint(theme.textColor, '#80FFFF00') : Qt.tint(theme.textColor, '#80FF3300')
+        color: textColorLight ? Qt.tint(Kirigami.Theme.textColor, '#80FFFF00') : Qt.tint(Kirigami.Theme.textColor, '#80FF3300')
         font.pixelSize: fontPixelSize * 0.3
         font.pointSize: -1
         verticalAlignment: Text.AlignBottom
@@ -164,7 +166,7 @@ Item {
         }
     }
 
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: getOptionsDS
         engine: 'executable'
 

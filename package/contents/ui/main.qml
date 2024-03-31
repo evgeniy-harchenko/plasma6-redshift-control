@@ -3,12 +3,13 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasma5support as Plasma5Support
 
-Item {
+PlasmoidItem {
     id: main
 
     anchors.fill: parent
@@ -23,15 +24,15 @@ Item {
     property bool smoothTransitions: plasmoid.configuration.smoothTransitions
 
     property bool geoclueLocationEnabled: plasmoid.configuration.geoclueLocationEnabled
-    property double latitude: plasmoid.configuration.latitude
-    property double longitude: plasmoid.configuration.longitude
+    property string latitude: plasmoid.configuration.latitude
+    property string longitude: plasmoid.configuration.longitude
     property int dayTemperature: plasmoid.configuration.dayTemperature
     property int nightTemperature: plasmoid.configuration.nightTemperature
-    property double dayBrightness: plasmoid.configuration.dayBrightness
-    property double nightBrightness: plasmoid.configuration.nightBrightness
-    property double gammaR: plasmoid.configuration.gammaR
-    property double gammaG: plasmoid.configuration.gammaG
-    property double gammaB: plasmoid.configuration.gammaB
+    property real dayBrightness: plasmoid.configuration.dayBrightness
+    property real nightBrightness: plasmoid.configuration.nightBrightness
+    property real gammaR: plasmoid.configuration.gammaR
+    property real gammaG: plasmoid.configuration.gammaG
+    property real gammaB: plasmoid.configuration.gammaB
     property string renderMode: plasmoid.configuration.renderMode
     property string renderModeString: plasmoid.configuration.renderModeString
     property bool preserveScreenColour: renderMode === 'randr' || renderMode === 'vidmode' ? plasmoid.configuration.preserveScreenColour : false
@@ -41,7 +42,7 @@ Item {
     property bool manualEnabled: false
     property int currentTemperature: manualStartingTemperature
     property int manualStartingBrightness: 100
-    property int manualBrightness: manualStartingBrightness
+    property real manualBrightness: manualStartingBrightness
     property bool manualEnabledBrightness: false
     property int currentBrightness: manualStartingBrightness
 
@@ -60,16 +61,31 @@ Item {
     property string redshiftPrintCommand: 'LANG=C ' + redshiftCommand + ' -p'
 
     property bool inTray: (plasmoid.parent === null || plasmoid.parent.objectName === 'taskItemContainer')
+    property string toolTipText: ""
 
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.compactRepresentation: CompactRepresentation { }
+    /*toolTipMainText: i18n("Redshift Control")
+    toolTipSubText: toolTipText
+    toolTipTextFormat: Text.RichText*/
+
+    PlasmaCore.ToolTipArea {
+        anchors.fill: parent
+        icon: 'redshift-status-on'
+        mainText: i18n("Redshift Control")
+        subText: {
+            var details = toolTipText
+            return details
+        }
+    }
+
+    preferredRepresentation: fullRepresentation
+    fullRepresentation: CompactRepresentation { }
 
     Component.onCompleted: {
         print('renderModeString: ' + renderModeString)
-        if (!inTray) {
+        /*if (!inTray) {
             // not in tray
-            Plasmoid.fullRepresentation = null
-        }
+            fullRepresentation = null
+        }*/
         restartRedshiftIfAutostart()
     }
 
@@ -109,7 +125,7 @@ Item {
         source: '../fonts/fontawesome-webfont-4.3.0.ttf'
     }
 
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: redshiftDS
         engine: 'executable'
 
@@ -134,7 +150,7 @@ Item {
                 var service = notificationsDS.serviceForSource('notifications')
                 var operation = service.operationDescription('createNotification')
                 operation.appName = 'Redshift Control'
-                operation.appIcon = 'redshift'
+                operation.appIcon = 'redshift-status-on'
                 operation.summary = 'Error running Redshift command'
                 operation.body = data.stderr
                 service.startOperationCall(operation)
@@ -151,7 +167,7 @@ Item {
         }
     }
 
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: redshiftPrintDS
         engine: 'executable'
         interval: active ? 10000 : 0
@@ -177,35 +193,41 @@ Item {
         }
     }
 
-    PlasmaCore.DataSource {
+    Plasma5Support.DataSource {
         id: notificationsDS
         engine: 'notifications'
         connectedSources: [ 'notifications' ]
     }
 
     function updateTooltip() {
-        var toolTipSubText = ''
-        toolTipSubText += '<font size="4">'
+        toolTipText = ''
+        toolTipText += '<font size="4">'
         if (active) {
-            toolTipSubText += i18n("Turned on") + ", " + currentTemperature + "K"
+            toolTipText += i18n("Turned on") + ", " + currentTemperature + "K"
         } else {
             if (manualEnabled) {
-                toolTipSubText += i18n("Manual temperature") + " " + manualTemperature + "K | " + i18n("Brightness") + " " + (manualBrightness*0.01).toFixed(2)
+                toolTipText += i18n("Manual temperature") + " " + manualTemperature + "K | " + i18n("Brightness") + " " + (manualBrightness*0.01).toFixed(2)
             } else {
-                toolTipSubText += i18n("Turned off")
+                toolTipText += i18n("Turned off")
             }
         }
-        toolTipSubText += "</font>"
-        toolTipSubText += "<br />"
-        toolTipSubText += "<i>" + i18n("Use left / middle click and wheel to manage screen temperature and brightness") + "</i>"
-        toolTipSubText += "<br />"
+        toolTipText += "</font>"
+        toolTipText += "<br />"
+        toolTipText += "<i>" + i18n("Use left / middle click and wheel to manage screen temperature and brightness") + "</i>"
+        toolTipText += "<br />"
         if (manualEnabledBrightness) {
-            toolTipSubText += i18n("Mouse wheel controls software brightness")
+            toolTipText += i18n("Mouse wheel controls software brightness")
         } else {
-            toolTipSubText += i18n("Mouse wheel controls screen temperature")
+            toolTipText += i18n("Mouse wheel controls screen temperature")
         }
 
-        Plasmoid.toolTipSubText = toolTipSubText
+        //Plasmoid.toolTipSubText = toolTipText
+        //toolTipTextFormat: Text.RichText
+        //toolTipSubText = toolTipText
+
+        //toolTipMainText = i18n("Redshift Control")
+        toolTipSubText = toolTipText
+        //Plasmoid.icon = 'redshift-status-on'
 
         plasmoidPassiveTimer.stop()
         plasmoid.status = PlasmaCore.Types.ActiveStatus
@@ -226,10 +248,12 @@ Item {
     onManualBrightnessChanged: updateTooltip()
     onCurrentTemperatureChanged: updateTooltip()
 
-    Plasmoid.toolTipMainText: i18n("Redshift Control")
-    Plasmoid.toolTipSubText: ''
-    Plasmoid.toolTipTextFormat: Text.RichText
-    Plasmoid.icon: 'redshift'
+    /*toolTipMainText: i18n("Redshift Control")
+    toolTipSubText: ''
+    toolTipTextFormat: Text.RichText
+    Plasmoid.icon: 'redshift-status-on'*/
+    toolTipTextFormat: Text.RichText
+
 
     // NOTE: taken from colorPicker plasmoid
     // prevents the popup from actually opening, needs to be queued
