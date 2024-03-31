@@ -1,74 +1,74 @@
-# Copyright (C) YEAR This file is copyright:
+# Lithuanian translations for plasma-redshift-control package.
+# Copyright (C) 2019 This file is copyright:
 # This file is distributed under the same license as the plasma-redshift-control package.
+# Automatically generated, 2019.
 #
-# Volkan Gezer <volkangezer@gmail.com>, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-redshift-control\n"
+"Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2023-02-20 17:30+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
-"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: 2019-10-02 22:58+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: lt\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: package/contents/config/config.qml:11
 msgid "General"
-msgstr "Genel"
+msgstr "Bendra"
 
 #: package/contents/config/config.qml:16
 msgid "Advanced"
-msgstr "Gelişmiş"
+msgstr "Išplėstiniai"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:63
 msgid "Location"
-msgstr "Konum"
+msgstr "Vieta"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:69
 msgid "Automatic (geoclue)"
-msgstr "Kendiliğinden (geoclue)"
+msgstr "Automatinė (geoclue)"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:73
 msgid "Latitude:"
-msgstr "Enlem:"
+msgstr "Platuma:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:89
 msgid "Locate"
-msgstr "Konumu Bul"
+msgstr "Nustatyti vietą"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:90
 msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr ""
-"Bu işlem KDE içinde yerel olarak kullanılan Mozilla Konum Servisi'ni kullanır"
+msgstr "Tai naudos Mozilla vietos tarnybą tiesiogiai KDE aplinkoje"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:101
 msgid "Longitude:"
-msgstr "Boylam:"
+msgstr "Ilguma:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:123
 msgid "Temperature"
-msgstr "Sıcaklık"
+msgstr "Temperatūra"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:128
 #: package/contents/ui/main.qml:193
 msgid "Brightness"
-msgstr "Parlaklık"
+msgstr "Ryškumas"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:134
 #: package/contents/ui/config/ConfigAdvanced.qml:147
 msgid "Day:"
-msgstr "Gün:"
+msgstr "Dieną:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:160
 #: package/contents/ui/config/ConfigAdvanced.qml:173
 msgid "Night:"
-msgstr "Gece:"
+msgstr "Naktį:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:191
 msgid "Gamma"
@@ -76,19 +76,19 @@ msgstr "Gama"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:196
 msgid "RGB:"
-msgstr "KYM:"
+msgstr "RGB:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:231
 msgid "Mode"
-msgstr "Kip"
+msgstr "Veiksena"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:270
 msgid "Screen"
-msgstr "Ekran"
+msgstr "Ekranas"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:276
 msgid "Card"
-msgstr "Kart"
+msgstr "Kortelė"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:290
 msgid "CRTC"
@@ -96,85 +96,87 @@ msgstr "CRTC"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:298
 msgid "Preserve screen colour"
-msgstr "Ekran rengini koru"
+msgstr "Išsaugoti ekrano spalvą"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:306
 msgid "Insert custom mode options"
-msgstr "Özel kip ekleme seçenekleri"
+msgstr "Įterpti tinkintas veiksenos parinktis"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:346
+#, fuzzy
+#| msgid "Redshift version"
 msgid "Redshift version:"
-msgstr "Redshift sürümü:"
+msgstr "Redshift versija"
 
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
-msgstr "Plasmoid sürümü"
+msgstr "Plasma įskiepio versija"
 
 #: package/contents/ui/config/ConfigGeneral.qml:31
 msgid "Autostart"
-msgstr "Otomatik başlat"
+msgstr "Automatiškai paleisti"
 
 #: package/contents/ui/config/ConfigGeneral.qml:37
 msgid "Smooth transitions"
-msgstr "Düzgün geçişler"
+msgstr "Glotnūs perėjimai"
 
 #: package/contents/ui/config/ConfigGeneral.qml:48
 msgid "Manual temperature step:"
-msgstr "El ile ayarlanan sıcaklık adımı:"
+msgstr "Rankinis temperatūros žingsnis:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:61
 msgid "Manual brightness step:"
-msgstr "El ile ayarlanan parlaklık adımı:"
+msgstr "Rankinis ryškumo žingsnis:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:81
 msgid "Use default icons"
-msgstr "Öntanımlı simgeleri kullan"
+msgstr "Naudoti numatytąsias piktogramas"
 
 #: package/contents/ui/config/ConfigGeneral.qml:86
 msgid "Active:"
-msgstr "Etkin:"
+msgstr "Aktyvus:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:99
 msgid "Inactive:"
-msgstr "Etkin değil:"
+msgstr "Pasyvus:"
 
 #: package/contents/ui/config/IconPicker.qml:73
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose..."
-msgstr "Seç..."
+msgstr "Pasirinkti..."
 
 #: package/contents/ui/config/IconPicker.qml:78
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "Simgeyi Temizle"
+msgstr "Išvalyti piktogramą"
 
 #: package/contents/ui/main.qml:190
 msgid "Turned on"
-msgstr "Açık"
+msgstr "Įjungta"
 
 #: package/contents/ui/main.qml:193
 msgid "Manual temperature"
-msgstr "El ile ayarlanan sıcaklık"
+msgstr "Rankinė temperatūra"
 
 #: package/contents/ui/main.qml:195
 msgid "Turned off"
-msgstr "Kapalı"
+msgstr "Išjungta"
 
 #: package/contents/ui/main.qml:200
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
-"Sol / orta tıklama ve tekerleği kullanarak ekran sıcaklığı ve parlaklığı el "
-"ile ayarlayın"
+"Naudokite pelės kairiojo / viduriniojo mygtuko spustelėjimą ir ratuką, "
+"norėdami valdyti ekrano temperatūrą ir ryškumą"
 
 #: package/contents/ui/main.qml:203
 msgid "Mouse wheel controls software brightness"
-msgstr "Fare tekerleği yazılım parlaklığını ayarlar"
+msgstr "Pelės ratukas valdo programinės įrangos ryškumą"
 
 #: package/contents/ui/main.qml:205
 msgid "Mouse wheel controls screen temperature"
-msgstr "Fare tekerleği ekran sıcaklığını ayarlar"
+msgstr "Pelės ratukas valdo ekrano temperatūrą"
 
 #: package/contents/ui/main.qml:229
 msgid "Redshift Control"
-msgstr "Redshift Denetimi"
+msgstr "Redshift valdymas"

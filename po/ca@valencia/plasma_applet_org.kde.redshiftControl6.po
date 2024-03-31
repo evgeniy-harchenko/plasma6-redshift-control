@@ -1,4 +1,4 @@
-# Translation of plasma_applet_org.kde.redshiftControl.po to Catalan
+# Translation of plasma_applet_org.kde.redshiftControl.po to Catalan (Valencian)
 # Copyright (C) 2017-2022 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -7,13 +7,13 @@
 # Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-redshift-control\n"
+"Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2022-12-09 08:52+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,11 +47,11 @@ msgstr "Ubica"
 #: package/contents/ui/config/ConfigAdvanced.qml:90
 msgid "This will use Mozilla Location Service exposed natively in KDE"
 msgstr ""
-"Això usarà el servei d'ubicació del Mozilla exposat de forma nativa al KDE"
+"Açò utilitzarà el servei d'ubicació de Mozilla exposat de forma nativa a KDE"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:101
 msgid "Longitude:"
-msgstr "Longitud:"
+msgstr "Llargària:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:123
 msgid "Temperature"
@@ -106,7 +106,7 @@ msgstr "Opcions per al mode d'inserció personalitzat"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:346
 msgid "Redshift version:"
-msgstr "Versió del Redshift:"
+msgstr "Versió de Redshift:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
@@ -130,7 +130,7 @@ msgstr "Pas de la lluminositat manual:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:81
 msgid "Use default icons"
-msgstr "Usa les icones predeterminades"
+msgstr "Utilitza les icones predeterminades"
 
 #: package/contents/ui/config/ConfigGeneral.qml:86
 msgid "Active:"
@@ -152,7 +152,7 @@ msgstr "Neteja la icona"
 
 #: package/contents/ui/main.qml:190
 msgid "Turned on"
-msgstr "Encès"
+msgstr "Encés"
 
 #: package/contents/ui/main.qml:193
 msgid "Manual temperature"
@@ -166,8 +166,8 @@ msgstr "Apagat"
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
-"Usa el clic esquerre / del mig i la roda per a gestionar la temperatura i la "
-"lluminositat de la pantalla"
+"Utilitza el clic esquerre / del mig i la roda per a gestionar la temperatura "
+"i la lluminositat de la pantalla"
 
 #: package/contents/ui/main.qml:203
 msgid "Mouse wheel controls software brightness"
@@ -179,4 +179,4 @@ msgstr "La roda del ratolí controla la temperatura de la pantalla"
 
 #: package/contents/ui/main.qml:229
 msgid "Redshift Control"
-msgstr "Control del Redshift"
+msgstr "Control de Redshift"

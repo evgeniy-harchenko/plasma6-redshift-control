@@ -105,17 +105,17 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
-            width : parent.width
-            spacing : 2
+            width: parent.width
+            spacing: 2
             Layout.alignment: Qt.AlignRight
             Label {
-                text : i18n("Plasmoid version") + ": "
-                verticalAlignment : Text.AlignVCenter
-                font.bold : true
+                text: i18n("Plasmoid version") + ": "
+                verticalAlignment: Text.AlignVCenter
+                font.bold: true
             }
             Label {
-                text : Plasmoid.metaData.version
-                verticalAlignment : Text.AlignVCenter
+                text: Plasmoid.metaData.version
+                verticalAlignment: Text.AlignVCenter
             }
         }
     }

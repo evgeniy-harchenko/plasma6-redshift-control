@@ -2,7 +2,7 @@
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name=""/>
 
     <group name="General">
@@ -28,7 +28,7 @@
             <default>redshift-status-off</default>
         </entry>
     </group>
-    
+
     <group name="Advanced">
         <entry name="geoclueLocationEnabled" type="Bool">
             <default>false</default>
@@ -39,21 +39,21 @@
         <entry name="longitude" type="String">
             <default>7.0</default>
         </entry>
-        
+
         <entry name="dayTemperature" type="Int">
             <default>6500</default>
         </entry>
         <entry name="nightTemperature" type="Int">
             <default>4000</default>
         </entry>
-        
+
         <entry name="dayBrightness" type="Double">
             <default>1.0</default>
         </entry>
         <entry name="nightBrightness" type="Double">
             <default>1.0</default>
         </entry>
-        
+
         <entry name="gammaR" type="Double">
             <default>1</default>
         </entry>
@@ -63,7 +63,7 @@
         <entry name="gammaB" type="Double">
             <default>1</default>
         </entry>
-        
+
         <entry name="renderMode" type="String">
             <default></default>
         </entry>
@@ -83,5 +83,5 @@
             <default></default>
         </entry>
     </group>
-    
+
 </kcfg>

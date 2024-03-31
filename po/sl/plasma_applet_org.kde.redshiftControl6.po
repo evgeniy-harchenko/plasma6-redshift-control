@@ -1,93 +1,95 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-redshift-control package.
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2023-03-11 04:53\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2022-12-10 09:27+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-redshift-control/"
-"plasma_applet_org.kde.redshiftControl.pot\n"
-"X-Crowdin-File-ID: 10198\n"
+"X-Generator: Lokalize 22.08.3\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 
 #: package/contents/config/config.qml:11
 msgid "General"
-msgstr "常规"
+msgstr "Splošno"
 
 #: package/contents/config/config.qml:16
 msgid "Advanced"
-msgstr "高级"
+msgstr "Napredno"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:63
 msgid "Location"
-msgstr "位置"
+msgstr "Lokacija"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:69
 msgid "Automatic (geoclue)"
-msgstr "自动 (geoclue)"
+msgstr "Samodejno (iz geodetskega položaja)"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:73
 msgid "Latitude:"
-msgstr "纬度："
+msgstr "Geografska širina:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:89
 msgid "Locate"
-msgstr "定位"
+msgstr "Lociraj"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:90
 msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "这将会使用在 KDE 中原生使用的 Mozilla 定位服务"
+msgstr ""
+"Ta storitev bo uporabljala storitev Mozilla Location Service, ki je izvirno "
+"izpostavljena v KDE"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:101
 msgid "Longitude:"
-msgstr "经度："
+msgstr "Geografska dolžina:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:123
 msgid "Temperature"
-msgstr "温度"
+msgstr "Temperatura"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:128
 #: package/contents/ui/main.qml:193
 msgid "Brightness"
-msgstr "亮度"
+msgstr "Svetlost"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:134
 #: package/contents/ui/config/ConfigAdvanced.qml:147
 msgid "Day:"
-msgstr "白天："
+msgstr "Dan:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:160
 #: package/contents/ui/config/ConfigAdvanced.qml:173
 msgid "Night:"
-msgstr "夜晚："
+msgstr "Noč:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:191
 msgid "Gamma"
-msgstr "伽玛分布"
+msgstr "Gama"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:196
 msgid "RGB:"
-msgstr "RGB："
+msgstr "RGB:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:231
 msgid "Mode"
-msgstr "模式"
+msgstr "Način"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:270
 msgid "Screen"
-msgstr "屏幕"
+msgstr "Zaslon"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:276
 msgid "Card"
-msgstr "卡片"
+msgstr "Kartica"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:290
 msgid "CRTC"
@@ -95,83 +97,85 @@ msgstr "CRTC"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:298
 msgid "Preserve screen colour"
-msgstr "保留屏幕色彩"
+msgstr "Ohrani barvo zaslona"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:306
 msgid "Insert custom mode options"
-msgstr "插入自定义模式选项"
+msgstr "Vstavi možnosti načina po meri"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:346
 msgid "Redshift version:"
-msgstr "Redshift 版本："
+msgstr "Redshift različica:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
-msgstr "Plasmoid 版本"
+msgstr "Plasmoid verzija"
 
 #: package/contents/ui/config/ConfigGeneral.qml:31
 msgid "Autostart"
-msgstr "自动启动"
+msgstr "Samodejni zagon"
 
 #: package/contents/ui/config/ConfigGeneral.qml:37
 msgid "Smooth transitions"
-msgstr "平滑过渡"
+msgstr "Gladke spremembe"
 
 #: package/contents/ui/config/ConfigGeneral.qml:48
 msgid "Manual temperature step:"
-msgstr "手动温阶："
+msgstr "Ročni korak temperature:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:61
 msgid "Manual brightness step:"
-msgstr "手动亮阶："
+msgstr "Ročni korak svetlosti:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:81
 msgid "Use default icons"
-msgstr "使用默认图标"
+msgstr "Uporabi privzete ikone"
 
 #: package/contents/ui/config/ConfigGeneral.qml:86
 msgid "Active:"
-msgstr "活动："
+msgstr "Dejavno:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:99
 msgid "Inactive:"
-msgstr "未活动："
+msgstr "Nedejavno:"
 
 #: package/contents/ui/config/IconPicker.qml:73
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose..."
-msgstr "选择..."
+msgstr "Izberi..."
 
 #: package/contents/ui/config/IconPicker.qml:78
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "清除图标"
+msgstr "Očisti ikone"
 
 #: package/contents/ui/main.qml:190
 msgid "Turned on"
-msgstr "已开启"
+msgstr "Vklopljeno"
 
 #: package/contents/ui/main.qml:193
 msgid "Manual temperature"
-msgstr "手动色温"
+msgstr "Ročna temperatura"
 
 #: package/contents/ui/main.qml:195
 msgid "Turned off"
-msgstr "已关闭"
+msgstr "Izklopljeno"
 
 #: package/contents/ui/main.qml:200
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
-msgstr "使用左键/中键点击与滚轮来控制屏幕色温与亮度"
+msgstr ""
+"Za upravljanje temperature in svetlosti zaslona uporabite levi / srednji "
+"klik in kolesce"
 
 #: package/contents/ui/main.qml:203
 msgid "Mouse wheel controls software brightness"
-msgstr "鼠标滚轮控制软件亮度"
+msgstr "Miško kolesce programsko nadzoruje svetlost"
 
 #: package/contents/ui/main.qml:205
 msgid "Mouse wheel controls screen temperature"
-msgstr "鼠标滚轮控制屏幕色温"
+msgstr "Miško kolesce programsko nadzoruje temperaturo"
 
 #: package/contents/ui/main.qml:229
 msgid "Redshift Control"
-msgstr "Redshift 控制"
+msgstr "Redshift Control"

@@ -50,7 +50,7 @@ Button {
         width: Kirigami.Units.iconSizes.medium + fixedMargins.left + fixedMargins.right
         height: width
         imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
-                    ? "widgets/panel-background" : "widgets/background"
+            ? "widgets/panel-background" : "widgets/background"
 
         Kirigami.Icon {
             id: iconPreview

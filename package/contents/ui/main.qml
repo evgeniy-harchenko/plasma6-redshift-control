@@ -56,11 +56,11 @@ PlasmoidItem {
 
     // - commands
     property string redshiftCommand: 'redshift' + locationCmdPart + modeCmdPart + ' -t ' + dayTemperature + ':' + nightTemperature + brightnessAndGamma + (smoothTransitions ? '' : ' -r')
-    property string redshiftOneTimeBrightnessAndGamma: ' -b ' + (currentBrightness*0.01).toFixed(2) + ':' + (currentBrightness*0.01).toFixed(2) + ' -g ' + gammaR + ':' + gammaG + ':' + gammaB
+    property string redshiftOneTimeBrightnessAndGamma: ' -b ' + (currentBrightness * 0.01).toFixed(2) + ':' + (currentBrightness * 0.01).toFixed(2) + ' -g ' + gammaR + ':' + gammaG + ':' + gammaB
     property string redshiftOneTimeCommand: 'redshift' + modeCmdPart + ' -O ' + manualTemperature + redshiftOneTimeBrightnessAndGamma + ' -r'
     property string redshiftPrintCommand: 'LANG=C ' + redshiftCommand + ' -p'
 
-    property bool inTray: (plasmoid.parent === null || plasmoid.parent.objectName === 'taskItemContainer')
+    //property bool inTray: (plasmoid.parent === null || plasmoid.parent.objectName === 'taskItemContainer')
     property string toolTipText: ""
 
     /*toolTipMainText: i18n("Redshift Control")
@@ -78,7 +78,8 @@ PlasmoidItem {
     }
 
     preferredRepresentation: fullRepresentation
-    fullRepresentation: CompactRepresentation { }
+    fullRepresentation: CompactRepresentation {
+    }
 
     Component.onCompleted: {
         print('renderModeString: ' + renderModeString)
@@ -133,7 +134,7 @@ PlasmoidItem {
 
         connectedSources: [redshiftStopSource]
 
-        onNewData: {
+        onNewData: (sourceName, data) => {
             if (sourceName === redshiftStopSource) {
                 print('clearing connected sources, stop source was: ' + redshiftStopSource)
                 connectedSources.length = 0
@@ -174,7 +175,7 @@ PlasmoidItem {
 
         connectedSources: []
 
-        onNewData: {
+        onNewData: (sourceName, data) => {
             if (data['exit code'] > 0) {
                 print('Error running redshift print cmd with command: ' + sourceName + '   ...stderr: ' + data.stderr)
                 return
@@ -188,7 +189,7 @@ PlasmoidItem {
                 currentTemperature = parseInt(matchTemperature[1])
             }
             if (matchBrightness !== null) {
-                currentBrightness = parseFloat(matchBrightness[1])*100
+                currentBrightness = parseFloat(matchBrightness[1]) * 100
             }
         }
     }
@@ -196,7 +197,7 @@ PlasmoidItem {
     Plasma5Support.DataSource {
         id: notificationsDS
         engine: 'notifications'
-        connectedSources: [ 'notifications' ]
+        connectedSources: ['notifications']
     }
 
     function updateTooltip() {
@@ -206,7 +207,7 @@ PlasmoidItem {
             toolTipText += i18n("Turned on") + ", " + currentTemperature + "K"
         } else {
             if (manualEnabled) {
-                toolTipText += i18n("Manual temperature") + " " + manualTemperature + "K | " + i18n("Brightness") + " " + (manualBrightness*0.01).toFixed(2)
+                toolTipText += i18n("Manual temperature") + " " + manualTemperature + "K | " + i18n("Brightness") + " " + (manualBrightness * 0.01).toFixed(2)
             } else {
                 toolTipText += i18n("Turned off")
             }

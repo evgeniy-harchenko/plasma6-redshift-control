@@ -1,76 +1,77 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-redshift-control package.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2022.
 #
-# Kristóf Kiszel <kiszel.kristof@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-redshift-control\n"
+"Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2021-01-12 21:29+0100\n"
-"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
-"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
-"Language: hu\n"
+"PO-Revision-Date: 2022-02-15 11:21+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.03.70\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
 
 #: package/contents/config/config.qml:11
 msgid "General"
-msgstr "Általános"
+msgstr "Generale"
 
 #: package/contents/config/config.qml:16
 msgid "Advanced"
-msgstr "Speciális"
+msgstr "Avansate"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:63
 msgid "Location"
-msgstr "Hely"
+msgstr "Amplasare"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:69
 msgid "Automatic (geoclue)"
-msgstr "Automatikus (geoclue)"
+msgstr "Automată (geoclue)"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:73
 msgid "Latitude:"
-msgstr "Szélesség:"
+msgstr "Latitudine:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:89
 msgid "Locate"
-msgstr "Keresés"
+msgstr "Localizează"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:90
 msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "A KDE-n belül natívan elérhető Mozilla Location Service használata"
+msgstr "Aceasta va folosi Serviciul de Localizare Mozilla expus nativ în KDE"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:101
 msgid "Longitude:"
-msgstr "Hosszúság:"
+msgstr "Longitudine:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:123
 msgid "Temperature"
-msgstr "Hőmérséklet"
+msgstr "Temperatură"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:128
 #: package/contents/ui/main.qml:193
 msgid "Brightness"
-msgstr "Fényerő"
+msgstr "Luminozitate"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:134
 #: package/contents/ui/config/ConfigAdvanced.qml:147
 msgid "Day:"
-msgstr "Nappal:"
+msgstr "Zi:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:160
 #: package/contents/ui/config/ConfigAdvanced.qml:173
 msgid "Night:"
-msgstr "Éjszaka:"
+msgstr "Noapte:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:191
 msgid "Gamma"
-msgstr "Gamma"
+msgstr "Gama"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:196
 msgid "RGB:"
@@ -78,15 +79,15 @@ msgstr "RGB:"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:231
 msgid "Mode"
-msgstr "Mód"
+msgstr "Regim"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:270
 msgid "Screen"
-msgstr "Képernyő"
+msgstr "Ecran"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:276
 msgid "Card"
-msgstr "Kártya"
+msgstr "Cartelă"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:290
 msgid "CRTC"
@@ -94,87 +95,87 @@ msgstr "CRTC"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:298
 msgid "Preserve screen colour"
-msgstr "Képernyőszín megőrzése"
+msgstr "Păstrează culoarea ecranului"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:306
 msgid "Insert custom mode options"
-msgstr "Saját módopciók beszúrása"
+msgstr "Inserează opțiuni personalizate de regim"
 
 #: package/contents/ui/config/ConfigAdvanced.qml:346
 #, fuzzy
 #| msgid "Redshift version"
 msgid "Redshift version:"
-msgstr "Redshift verzió"
+msgstr "Versiune Redshift"
 
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
-msgstr "Plasmoid verzió"
+msgstr "Versiune plasmoid"
 
 #: package/contents/ui/config/ConfigGeneral.qml:31
 msgid "Autostart"
-msgstr "Automatikus indítás"
+msgstr "Pornire automată"
 
 #: package/contents/ui/config/ConfigGeneral.qml:37
 msgid "Smooth transitions"
-msgstr "Sima átmenetek"
+msgstr "Tranziții fine"
 
 #: package/contents/ui/config/ConfigGeneral.qml:48
 msgid "Manual temperature step:"
-msgstr "Kézi hőmérséklet-léptetés:"
+msgstr "Pas de temperatură manuală:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:61
 msgid "Manual brightness step:"
-msgstr "Kézi fényerőléptetés:"
+msgstr "Pas de luminozitate manuală:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:81
 msgid "Use default icons"
-msgstr "Alapértelmezett ikonok használata"
+msgstr "Folosește pictograme implicite"
 
 #: package/contents/ui/config/ConfigGeneral.qml:86
 msgid "Active:"
-msgstr "Aktív:"
+msgstr "Activ:"
 
 #: package/contents/ui/config/ConfigGeneral.qml:99
 msgid "Inactive:"
-msgstr "Inaktív:"
+msgstr "Inactiv:"
 
 #: package/contents/ui/config/IconPicker.qml:73
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose..."
-msgstr "Választás…"
+msgstr "Alege..."
 
 #: package/contents/ui/config/IconPicker.qml:78
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr "Ikon visszaállítása"
+msgstr "Șterge pictograma"
 
 #: package/contents/ui/main.qml:190
 msgid "Turned on"
-msgstr "Bekapcsolva"
+msgstr "Pornit"
 
 #: package/contents/ui/main.qml:193
 msgid "Manual temperature"
-msgstr "Kézi hőmérséklet"
+msgstr "Temperatură manuală"
 
 #: package/contents/ui/main.qml:195
 msgid "Turned off"
-msgstr "Kikapcsolva"
+msgstr "Oprit"
 
 #: package/contents/ui/main.qml:200
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
-"Használja az egér bal / középső gombját és a görgőt a képernyő "
-"színhőmérsékletének és fényerejének kezeléséhez"
+"Folosiți clic stâng / mijlociu și rotița pentru a gestiona temperatura și "
+"luminozitatea ecranului"
 
 #: package/contents/ui/main.qml:203
 msgid "Mouse wheel controls software brightness"
-msgstr "Szoftveres fényerőbeállítás egérgörgővel"
+msgstr "Rotița mausului controlează luminozitatea software"
 
 #: package/contents/ui/main.qml:205
 msgid "Mouse wheel controls screen temperature"
-msgstr "Képernyő színhőmérsékletének beállítása egérgörgővel"
+msgstr "Rotița mausului controlează temperatura ecranului"
 
 #: package/contents/ui/main.qml:229
 msgid "Redshift Control"
-msgstr "Redshift-vezérlő"
+msgstr "Control Redshift"

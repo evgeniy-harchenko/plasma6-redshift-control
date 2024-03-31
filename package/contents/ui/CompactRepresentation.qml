@@ -15,7 +15,7 @@ import org.kde.kirigami as Kirigami
 Item {
     id: compactRepresentation
 
-    property double itemWidth:  parent === null ? 0 : vertical ? parent.width : parent.height
+    property double itemWidth: parent === null ? 0 : vertical ? parent.width : parent.height
     property double itemHeight: itemWidth
 
     Layout.preferredWidth: itemWidth
@@ -60,8 +60,14 @@ Item {
         font.pixelSize: fontPixelSize
         font.pointSize: -1
 
-        ColorAnimation on color { id: animWheelTemperature; running: false; from: redshiftColour; to: bulbIconColourCurrent; duration: 1000 }
-        ColorAnimation on color { id: animWheelBrighness;   running: false; from: brightnessColour; to: bulbIconColourCurrent; duration: 1000 }
+        ColorAnimation on color {
+            id: animWheelTemperature; running: false; from: redshiftColour;
+            to: bulbIconColourCurrent; duration: 1000
+        }
+        ColorAnimation on color {
+            id: animWheelBrighness; running: false; from: brightnessColour;
+            to: bulbIconColourCurrent; duration: 1000
+        }
     }
 
     PlasmaComponents.Label {
@@ -172,7 +178,7 @@ Item {
 
         connectedSources: ['redshift -V']
 
-        onNewData: {
+        onNewData: (sourceName, data) => {
             connectedSources.length = 0
             if (data['exit code'] > 0) {
                 print('Error running redshift with command: ' + sourceName + '   ...stderr: ' + data.stderr)

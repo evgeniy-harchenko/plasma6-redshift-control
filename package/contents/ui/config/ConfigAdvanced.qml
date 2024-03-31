@@ -69,16 +69,18 @@ KCM.SimpleKCM {
         }
 
         CheckBox {
-            id : geoclueLocationEnabled
+            id: geoclueLocationEnabled
             Kirigami.FormData.label: i18n("Automatic (geoclue)")
         }
 
         TextField {
-            id : latitude // decimals: 7
+            id: latitude // decimals: 7
             Kirigami.FormData.label: i18n("Latitude:")
             //Layout.preferredWidth : 150
-            enabled : !geoclueLocationEnabled.checked
-            validator: RegularExpressionValidator { regularExpression: /^(\+|-)?(?:90(?:(?:\.0{1,7})?)|(?:[0-9]|[1-8][0-9])?(?:(?:\.[0-9]{1,7})?))$/ }
+            enabled: !geoclueLocationEnabled.checked
+            validator: RegularExpressionValidator {
+                regularExpression: /^(\+|-)?(?:90(?:(?:\.0{1,7})?)|(?:[0-9]|[1-8][0-9])?(?:(?:\.[0-9]{1,7})?))$/
+            }
             /*validator: DoubleValidator {
                 top: 90
                 bottom: -90
@@ -89,11 +91,13 @@ KCM.SimpleKCM {
         }
 
         TextField {
-            id : longitude // decimals: 7
+            id: longitude // decimals: 7
             Kirigami.FormData.label: i18n("Longitude:")
             //Layout.preferredWidth : 150
-            enabled : !geoclueLocationEnabled.checked
-            validator: RegularExpressionValidator { regularExpression: /^(\+|-)?(?:180(?:(?:\.0{1,7})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])?(?:(?:\.[0-9]{1,7})?))$/ }
+            enabled: !geoclueLocationEnabled.checked
+            validator: RegularExpressionValidator {
+                regularExpression: /^(\+|-)?(?:180(?:(?:\.0{1,7})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])?(?:(?:\.[0-9]{1,7})?))$/
+            }
             /*validator: DoubleValidator {
                 top: 180
                 bottom: -180
@@ -104,12 +108,12 @@ KCM.SimpleKCM {
         }
 
         Button {
-            text : i18n("Locate") // tooltip: i18n("This will use Mozilla Location Service exposed natively in KDE")
-            onClicked : {
+            text: i18n("Locate") // tooltip: i18n("This will use Mozilla Location Service exposed natively in KDE")
+            onClicked: {
                 geolocationDS.connectedSources.length = 0
                 geolocationDS.connectedSources.push(geolocationDS.locationSource)
             }
-            enabled : !geoclueLocationEnabled.checked
+            enabled: !geoclueLocationEnabled.checked
         }
 
         Kirigami.Separator {
@@ -123,19 +127,19 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
 
             Slider {
-                id : dayTemperature
-                snapMode : Slider.SnapOnRelease
-                stepSize : -250
+                id: dayTemperature
+                snapMode: Slider.SnapOnRelease
+                stepSize: -250
                 from : 1000
-                to : 25000
+                to: 25000
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan : 2
+                Layout.columnSpan: 2
                 //implicitWidth : parent.width / 2
             }
             Label {
-                text : dayTemperature.value + "K"
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
+                text: dayTemperature.value + "K"
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
             }
         }
 
@@ -149,19 +153,19 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
 
             Slider {
-                id : nightTemperature
-                snapMode : Slider.SnapOnRelease
-                stepSize : -250
+                id: nightTemperature
+                snapMode: Slider.SnapOnRelease
+                stepSize: -250
                 from : 1000
-                to : 25000
+                to: 25000
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan : 2
+                Layout.columnSpan: 2
                 //implicitWidth : parent.width / 2
             }
             Label {
-                text : nightTemperature.value + "K"
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
+                text: nightTemperature.value + "K"
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
             }
         }
 
@@ -176,11 +180,11 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
 
             Slider {
-                id : dayBrightness
-                snapMode : Slider.SnapOnRelease
-                stepSize : 0.05
+                id: dayBrightness
+                snapMode: Slider.SnapOnRelease
+                stepSize: 0.05
                 from : 0.2
-                to : 1.0
+                to: 1.0
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 /*ToolTip {
@@ -190,8 +194,8 @@ KCM.SimpleKCM {
                 }*/
             }
             Label {
-                text : dayBrightness.value.toFixed(2)
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
+                text: dayBrightness.value.toFixed(2)
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
             }
         }
 
@@ -204,11 +208,11 @@ KCM.SimpleKCM {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Slider {
-                id : nightBrightness
-                snapMode : Slider.SnapOnRelease
-                stepSize : 0.05
+                id: nightBrightness
+                snapMode: Slider.SnapOnRelease
+                stepSize: 0.05
                 from : 0.2
-                to : 1.0
+                to: 1.0
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 /*ToolTip {
@@ -218,8 +222,8 @@ KCM.SimpleKCM {
                 }*/
             }
             Label {
-                text : nightBrightness.value.toFixed(2)
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
+                text: nightBrightness.value.toFixed(2)
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
             }
         }
 
@@ -233,20 +237,20 @@ KCM.SimpleKCM {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Slider {
-                id : gammaR
-                snapMode : Slider.SnapOnRelease
-                stepSize : -0.1
+                id: gammaR
+                snapMode: Slider.SnapOnRelease
+                stepSize: -0.1
                 from : 0.1
-                to : 10
+                to: 10
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan : 2
+                Layout.columnSpan: 2
             }
             TextField {
-                text : gammaR.value.toFixed(7)
-                Layout.preferredWidth : 100
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
-                onEditingFinished : {
+                text: gammaR.value.toFixed(7)
+                Layout.preferredWidth: 100
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                onEditingFinished: {
                     gammaR.value = parseFloat(text)
                 }
                 validator: DoubleValidator {
@@ -268,20 +272,20 @@ KCM.SimpleKCM {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Slider {
-                id : gammaG
-                snapMode : Slider.SnapOnRelease
-                stepSize : -0.1
+                id: gammaG
+                snapMode: Slider.SnapOnRelease
+                stepSize: -0.1
                 from : 0.1
-                to : 10
+                to: 10
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan : 2
+                Layout.columnSpan: 2
             }
             TextField {
-                text : gammaG.value.toFixed(7)
-                Layout.preferredWidth : 100
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
-                onEditingFinished : {
+                text: gammaG.value.toFixed(7)
+                Layout.preferredWidth: 100
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                onEditingFinished: {
                     gammaG.value = parseFloat(text)
                 }
                 validator: DoubleValidator {
@@ -303,20 +307,20 @@ KCM.SimpleKCM {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Slider {
-                id : gammaB
-                snapMode : Slider.SnapOnRelease
-                stepSize : -0.1
+                id: gammaB
+                snapMode: Slider.SnapOnRelease
+                stepSize: -0.1
                 from : 0.1
-                to : 10
+                to: 10
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan : 2
+                Layout.columnSpan: 2
             }
             TextField {
-                text : gammaB.value.toFixed(7)
-                Layout.preferredWidth : 100
-                Layout.alignment : Qt.AlignTop | Qt.AlignLeft
-                onEditingFinished : {
+                text: gammaB.value.toFixed(7)
+                Layout.preferredWidth: 100
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                onEditingFinished: {
                     gammaB.value = parseFloat(text)
                 }
                 validator: DoubleValidator {
@@ -335,114 +339,114 @@ KCM.SimpleKCM {
         }
 
         GridLayout {
-            Layout.fillWidth : true
-            columns : 4
+            Layout.fillWidth: true
+            columns: 4
 
             ComboBox {
-                id : modeCombo
-                textRole : "text"
-                model : ListModel {
+                id: modeCombo
+                textRole: "text"
+                model: ListModel {
                     ListElement {
-                        text : 'Auto'
-                        val : ''
+                        text: 'Auto'
+                        val: ''
                     }
                     ListElement {
-                        text : 'drm'
-                        val : 'drm'
+                        text: 'drm'
+                        val: 'drm'
                     }
                     ListElement {
-                        text : 'randr'
-                        val : 'randr'
+                        text: 'randr'
+                        val: 'randr'
                     }
                     ListElement {
-                        text : 'vidmode'
-                        val : 'vidmode'
+                        text: 'vidmode'
+                        val: 'vidmode'
                     }
                     ListElement {
-                        text : 'Manual'
-                        val : 'MANUAL'
+                        text: 'Manual'
+                        val: 'MANUAL'
                     }
                 }
-                onCurrentIndexChanged : {
+                onCurrentIndexChanged: {
                     cfg_renderMode = model.get(currentIndex).val
                     print('saved: ' + cfg_renderMode)
                     modeChanged()
                 }
             } // col 2
             TextField {
-                id : renderModeScreen
-                placeholderText : i18n("Screen")
-                visible : isMode([
+                id: renderModeScreen
+                placeholderText: i18n("Screen")
+                visible: isMode([
                     'randr',
                     'vidmode'
                 ])
-                onTextChanged : modeChanged()
+                onTextChanged: modeChanged()
             }
             TextField {
-                id : renderModeCard
-                placeholderText : i18n("Card")
-                visible : isMode([
+                id: renderModeCard
+                placeholderText: i18n("Card")
+                visible: isMode([
                     'drm',
                     'card'
                 ])
-                onTextChanged : modeChanged()
+                onTextChanged: modeChanged()
             }
             TextField {
-                id : fakeTextField
-                opacity : 0
-                visible : !renderModeScreen.visible && !renderModeCard.visible
+                id: fakeTextField
+                opacity: 0
+                visible: !renderModeScreen.visible && !renderModeCard.visible
             } // col 2
             TextField {
-                id : renderModeCrtc
-                width : advancedConfig / 8
-                placeholderText : i18n("CRTC")
-                opacity : isMode([
+                id: renderModeCrtc
+                width: advancedConfig / 8
+                placeholderText: i18n("CRTC")
+                opacity: isMode([
                     'drm',
                     'randr'
                 ])
                     ? 1
                     : 0
-                onTextChanged : modeChanged()
+                onTextChanged: modeChanged()
             } // col 4
             CheckBox {
-                id : preserveScreenColour
-                text : i18n("Preserve screen colour")
-                opacity : isMode([
+                id: preserveScreenColour
+                text: i18n("Preserve screen colour")
+                opacity: isMode([
                     'randr',
                     'vidmode'
                 ])
                     ? 1
                     : 0
-                enabled : parseFloat(versionString) >= 1.11
-                onCheckedChanged : modeChanged()
+                enabled: parseFloat(versionString) >= 1.11
+                onCheckedChanged: modeChanged()
             }
             TextField {
-                id : modeString
-                placeholderText : i18n("Insert custom mode options")
-                Layout.columnSpan : parent.columns
-            Layout.fillWidth: true
+                id: modeString
+                placeholderText: i18n("Insert custom mode options")
+                Layout.columnSpan: parent.columns
+                Layout.fillWidth: true
                 //Layout.preferredWidth : parent.width - 5
-                enabled : isMode([
+                enabled: isMode([
                     'MANUAL'
                 ])
-                visible : !isMode([
+                visible: !isMode([
                     ''
                 ])
-                onTextChanged : cfg_renderModeString = text
+                onTextChanged: cfg_renderModeString = text
             }
 
             RowLayout {
-                Layout.columnSpan : parent.columns
-                spacing : 2
+                Layout.columnSpan: parent.columns
+                spacing: 2
                 Layout.alignment: Qt.AlignRight
                 Label {
-                    text : i18n("Redshift version:")
-                    verticalAlignment : Text.AlignVCenter
-                    font.bold : true
+                    text: i18n("Redshift version:")
+                    verticalAlignment: Text.AlignVCenter
+                    font.bold: true
                 }
                 Label {
-                    text : versionString
-                    verticalAlignment : Text.AlignVCenter
+                    text: versionString
+                    verticalAlignment: Text.AlignVCenter
                 }
             }
         }
@@ -451,17 +455,17 @@ KCM.SimpleKCM {
 
     function modeChanged() {
         switch (cfg_renderMode) {
-        case 'drm':
-            modeString.text = '-m drm' + (renderModeCard.text.length > 0 ? ':card=' + renderModeCard.text : '') + (renderModeCrtc.text.length > 0 ? ':crtc=' + renderModeCrtc.text : '')
-            break
-        case 'randr':
-            modeString.text = '-m randr' + (renderModeScreen.text.length > 0 ? ':screen=' + renderModeScreen.text : '') + (renderModeCrtc.text.length > 0 ? ':crtc=' + renderModeCrtc.text : '') + (preserveScreenColour.enabled && preserveScreenColour.checked ? ':preserve=1' : '')
-            break
-        case 'vidmode':
-            modeString.text = '-m vidmode' + (renderModeScreen.text.length > 0 ? ':screen=' + renderModeScreen.text : '') + (preserveScreenColour.enabled && preserveScreenColour.checked ? ':preserve=1' : '')
-            break
-        default:
-            modeString.text = ''
+            case 'drm':
+                modeString.text = '-m drm' + (renderModeCard.text.length > 0 ? ':card=' + renderModeCard.text : '') + (renderModeCrtc.text.length > 0 ? ':crtc=' + renderModeCrtc.text : '')
+                break
+            case 'randr':
+                modeString.text = '-m randr' + (renderModeScreen.text.length > 0 ? ':screen=' + renderModeScreen.text : '') + (renderModeCrtc.text.length > 0 ? ':crtc=' + renderModeCrtc.text : '') + (preserveScreenColour.enabled && preserveScreenColour.checked ? ':preserve=1' : '')
+                break
+            case 'vidmode':
+                modeString.text = '-m vidmode' + (renderModeScreen.text.length > 0 ? ':screen=' + renderModeScreen.text : '') + (preserveScreenColour.enabled && preserveScreenColour.checked ? ':preserve=1' : '')
+                break
+            default:
+                modeString.text = ''
         }
         cfg_renderModeString = modeString.text
     }
@@ -479,7 +483,7 @@ KCM.SimpleKCM {
 
         connectedSources: ['redshift -V']
 
-        onNewData: (sourceName, data) =>  {
+        onNewData: (sourceName, data) => {
             connectedSources.length = 0
             if (data['exit code'] > 0) {
                 print('Error running redshift with command: ' + sourceName + '   ...stderr: ' + data.stderr)

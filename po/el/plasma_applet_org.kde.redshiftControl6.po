@@ -4,7 +4,7 @@
 # Stelios <sstavra@gmail.com>, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-redshift-control\n"
+"Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
 "PO-Revision-Date: 2019-07-31 13:21+0300\n"
