@@ -41,6 +41,10 @@ Item {
 
     property string versionString: 'N/A'
 
+    FontLoader {
+        source: '../fonts/fontawesome-webfont-4.3.0.ttf'
+    }
+
     Kirigami.Icon {
         id: customIcon
         anchors.fill: parent

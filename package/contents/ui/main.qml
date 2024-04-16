@@ -57,7 +57,7 @@ PlasmoidItem {
     // - commands
     property string redshiftCommand: 'redshift' + locationCmdPart + modeCmdPart + ' -t ' + dayTemperature + ':' + nightTemperature + brightnessAndGamma + (smoothTransitions ? '' : ' -r')
     property string redshiftOneTimeBrightnessAndGamma: ' -b ' + (currentBrightness * 0.01).toFixed(2) + ':' + (currentBrightness * 0.01).toFixed(2) + ' -g ' + gammaR + ':' + gammaG + ':' + gammaB
-    property string redshiftOneTimeCommand: 'redshift' + modeCmdPart + ' -O ' + manualTemperature + redshiftOneTimeBrightnessAndGamma + ' -r'
+    property string redshiftOneTimeCommand: 'redshift' + modeCmdPart + ' -PO ' + manualTemperature + redshiftOneTimeBrightnessAndGamma + ' -r'
     property string redshiftPrintCommand: 'LANG=C ' + redshiftCommand + ' -p'
 
     //property bool inTray: (plasmoid.parent === null || plasmoid.parent.objectName === 'taskItemContainer')
@@ -120,10 +120,6 @@ PlasmoidItem {
     onRedshiftPrintCommandChanged: {
         redshiftPrintDS.connectedSources.length = 0
         redshiftPrintDS.connectedSources.push(redshiftPrintCommand)
-    }
-
-    FontLoader {
-        source: '../fonts/fontawesome-webfont-4.3.0.ttf'
     }
 
     Plasma5Support.DataSource {
