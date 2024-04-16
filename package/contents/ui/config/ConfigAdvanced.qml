@@ -52,7 +52,7 @@ KCM.SimpleKCM {
 
         connectedSources: []
 
-        onNewData: {
+        onNewData: (sourceName, data) => {
             print('geolocation: ' + data.latitude)
             latitude.text = data.latitude
             longitude.text = data.longitude
@@ -134,7 +134,6 @@ KCM.SimpleKCM {
                 to: 25000
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan: 2
                 //implicitWidth : parent.width / 2
             }
             Label {
@@ -160,7 +159,6 @@ KCM.SimpleKCM {
                 to: 25000
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan: 2
                 //implicitWidth : parent.width / 2
             }
             Label {

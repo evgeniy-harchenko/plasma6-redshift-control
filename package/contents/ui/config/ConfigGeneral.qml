@@ -21,18 +21,9 @@ KCM.SimpleKCM {
     property string cfg_iconInactive: plasmoid.configuration.iconInactive
 
     Kirigami.FormLayout {
-        Layout.fillWidth: true
-        ButtonGroup {
-            id: viewGroup
-        }
-
         CheckBox {
             id: autostart
             Kirigami.FormData.label: i18n("Autostart")
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
         }
 
         CheckBox {
@@ -40,16 +31,34 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Smooth transitions")
         }
 
-        SpinBox {
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
+
+        RowLayout {
             Kirigami.FormData.label: i18n("Manual temperature step:")
-            id: manualTemperatureStep
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 10
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //decimals: 0
-            stepSize: 125
-            from: 25
-            to: 5000
-            enabled: smoothTransitions.checked
+
+            Slider {
+                id: manualTemperatureStep
+                snapMode: Slider.SnapOnRelease
+                stepSize: -125
+                from : 25
+                to: 5000
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                //implicitWidth : parent.width / 2
+            }
+            Label {
+                text: manualTemperatureStep.value
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
         /*SpinBox {
@@ -60,17 +69,26 @@ KCM.SimpleKCM {
             minimumValue: 0.01
             maximumValue: 0.2
         }*/
-        CoolSpinBox {
+
+        RowLayout {
             Kirigami.FormData.label: i18n("Manual brightness step:")
-            id: manualBrightnessStep
             Layout.fillHeight: true
             Layout.fillWidth: true
-            configKey: "manualBrightnessStep"
-            decimals: 2
-            minimumValue: 0.01
-            maximumValue: 0.2
-            stepSize: Math.round(0.01 * factor)
-            enabled: smoothTransitions.checked
+
+            Slider {
+                id: manualBrightnessStep
+                snapMode: Slider.SnapOnRelease
+                stepSize: -0.01
+                from : 0.01
+                to: 0.2
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                //implicitWidth : parent.width / 2
+            }
+            Label {
+                text: manualBrightnessStep.value.toFixed(2)
+                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+            }
         }
 
         Kirigami.Separator {
@@ -100,23 +118,29 @@ KCM.SimpleKCM {
             enabled: !useDefaultIcons.checked
         }
 
-        Kirigami.Separator {
+        /*Kirigami.Separator {
             Kirigami.FormData.isSection: true
         }
 
-        RowLayout {
-            width: parent.width
-            spacing: 2
-            Layout.alignment: Qt.AlignRight
-            Label {
-                text: i18n("Plasmoid version") + ": "
-                verticalAlignment: Text.AlignVCenter
-                font.bold: true
+
+        GridLayout {
+            Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 10
+            columns: 4
+            RowLayout {
+                Layout.columnSpan: parent.columns
+                spacing: 2
+                Layout.alignment: Qt.AlignRight
+                Label {
+                    text: i18n("Plasmoid version") + ": "
+                    verticalAlignment: Text.AlignVCenter
+                    font.bold: true
+                }
+                Label {
+                    text: Plasmoid.metaData.version
+                    verticalAlignment: Text.AlignVCenter
+                }
             }
-            Label {
-                text: Plasmoid.metaData.version
-                verticalAlignment: Text.AlignVCenter
-            }
-        }
+        }*/
     }
 }
