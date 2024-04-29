@@ -52,6 +52,10 @@ Button {
         imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
             ? "widgets/panel-background" : "widgets/background"
 
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Selection
+
+
         Kirigami.Icon {
             id: iconPreview
             anchors.centerIn: parent
