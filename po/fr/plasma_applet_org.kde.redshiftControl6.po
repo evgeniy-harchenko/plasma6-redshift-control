@@ -108,6 +108,44 @@ msgstr "Insérer des options personnalisées de mode"
 msgid "Redshift version:"
 msgstr "Version de Redshift :"
 
+#: ui/LocationsFixedView.qml:72
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Tapotez pour sélectionner votre emplacement sur la carte."
+
+#: ui/LocationsFixedView.qml:73
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Cliquez pour sélectionner votre emplacement sur la carte."
+
+#: ui/LocationsFixedView.qml:112
+#, kde-format
+msgid "Zoom in"
+msgstr "Zoom avant"
+
+#: ui/LocationsFixedView.qml:128
+#, kde-format
+msgid "Zoom out"
+msgstr "Zoom arrière"
+
+#: ui/LocationsFixedView.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Modifié à partir de la <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>carte mondial d'emplacements</"
+"link> par TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
 msgstr "Version du composant graphique"

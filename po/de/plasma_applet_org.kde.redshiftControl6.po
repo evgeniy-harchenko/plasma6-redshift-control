@@ -106,6 +106,45 @@ msgstr "Benutzerdefinierte Moduseinstellungen verwenden"
 msgid "Redshift version:"
 msgstr "Rotverschiebung-Version"
 
+#: ui/LocationsFixedView.qml:72
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Tippen, um Ihren Standort auf der Karte auszuwählen."
+
+#: ui/LocationsFixedView.qml:73
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Klicken, um Ihren Standort auf der Karte auszuwählen."
+
+#: ui/LocationsFixedView.qml:112
+#, kde-format
+msgid "Zoom in"
+msgstr "Vergrößern"
+
+#: ui/LocationsFixedView.qml:128
+#, fuzzy, kde-format
+#| msgid "Zoom in"
+msgid "Zoom out"
+msgstr "Vergrößern"
+
+#: ui/LocationsFixedView.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Von <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Positionskarte der Welt</link> "
+"geändert durch TUBS / Wikimedia Commons / <link url='https://creativecommons."
+"org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
 msgstr "Plasmoid-Version"

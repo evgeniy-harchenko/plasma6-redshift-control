@@ -105,6 +105,44 @@ msgstr "插入自定義模式選項"
 msgid "Redshift version:"
 msgstr "Redshift 版本："
 
+#: ui/LocationsFixedView.qml:72
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "輕點地圖選取您的所在地。"
+
+#: ui/LocationsFixedView.qml:73
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "點擊地圖選取您的所在地。"
+
+#: ui/LocationsFixedView.qml:112
+#, kde-format
+msgid "Zoom in"
+msgstr "放大"
+
+#: ui/LocationsFixedView.qml:128
+#, kde-format
+msgid "Zoom out"
+msgstr "縮小"
+
+#: ui/LocationsFixedView.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"從由 TUBS / Wikimedia Commons (<link url='https://creativecommons.org/"
+"licenses/by-sa/3.0'>CC BY-SA 3.0</link>) 所做的 <link url='https://commons."
+"wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>World "
+"location map</link> 修改"
+
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
 msgstr "Plasmoid 版本"

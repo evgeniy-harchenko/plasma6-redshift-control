@@ -105,6 +105,45 @@ msgstr "사용자 정의 모드 옵션 삽입"
 msgid "Redshift version:"
 msgstr "Redshift 버전:"
 
+#: ui/LocationsFixedView.qml:72
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "탭하여 지도에서 위치를 선택하십시오."
+
+#: ui/LocationsFixedView.qml:73
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "클릭하여 지도에서 위치를 선택하십시오."
+
+#: ui/LocationsFixedView.qml:112
+#, kde-format
+msgid "Zoom in"
+msgstr "확대"
+
+#: ui/LocationsFixedView.qml:128
+#, fuzzy, kde-format
+#| msgid "Zoom in"
+msgid "Zoom out"
+msgstr "확대"
+
+#: ui/LocationsFixedView.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"위키미디어 공용의 TUBS 사용자가 제작한 <link url='https://commons.wikimedia."
+"org/wiki/File:World_location_map_(equirectangular_180).svg'>세계 위치 지도</"
+"link>에서 수정됨. <link url='https://creativecommons.org/licenses/by-"
+"sa/3.0'>CC BY-SA 3.0</link>으로 라이선스됨"
+
 #: package/contents/ui/config/ConfigGeneral.qml:21
 msgid "Plasmoid version"
 msgstr "Plasmoid 버전"
