@@ -16,8 +16,8 @@ KCM.SimpleKCM {
     id: advancedConfig
 
     property alias cfg_geoclueLocationEnabled: geoclueLocationEnabled.checked
-    property alias cfg_latitude: latitude.text
-    property alias cfg_longitude: longitude.text
+    property alias cfg_latitude: locationsFixedView.latitudeFixed
+    property alias cfg_longitude: locationsFixedView.longitudeFixed
     property alias cfg_dayTemperature: dayTemperature.value
     property alias cfg_nightTemperature: nightTemperature.value
     property alias cfg_dayBrightness: dayBrightness.value
@@ -54,291 +54,300 @@ KCM.SimpleKCM {
 
         onNewData: (sourceName, data) => {
             print('geolocation: ' + data.latitude)
-            latitude.text = data.latitude
-            longitude.text = data.longitude
+            locationsFixedView.latitudeFixed = data.latitude
+            locationsFixedView.longitudeFixed = data.longitude
         }
     }
 
-    Kirigami.FormLayout {
-        //wideMode: true
+    ColumnLayout {
+        spacing: 0
 
-        Kirigami.Separator {
-            Layout.minimumWidth: Kirigami.Units.gridUnit * 20
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Location")
+        Kirigami.FormLayout {
+            //wideMode: true
+
+            Kirigami.Separator {
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 20
+                Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: i18n("Location")
+            }
+
+            CheckBox {
+                id: geoclueLocationEnabled
+                Kirigami.FormData.label: i18n("Automatic (geoclue)")
+            }
+
+            Button {
+                text: i18n("Locate") // tooltip: i18n("This will use Mozilla Location Service exposed natively in KDE")
+                onClicked: {
+                    geolocationDS.connectedSources.length = 0
+                    geolocationDS.connectedSources.push(geolocationDS.locationSource)
+                }
+                enabled: !geoclueLocationEnabled.checked
+            }
         }
 
-        CheckBox {
-            id: geoclueLocationEnabled
-            Kirigami.FormData.label: i18n("Automatic (geoclue)")
+        ScrollView {
+            ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+            ScrollBar.horizontal.policy: ScrollBar.AlwaysOn
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.maximumWidth: locationsFixedView.width
+            LocationsFixedView {
+                id: locationsFixedView
+                Layout.alignment: Qt.AlignHCenter
+                enabled: !geoclueLocationEnabled.checked
+            }
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: false
+            Layout.margins: Kirigami.Units.largeSpacing
+        }
+
+        Kirigami.FormLayout {
+            //wideMode: true
+
+            /*TextField {
+             *        id: latitude // decimals: 7
+             *        Kirigami.FormData.label: i18n("Latitude:")
+             *        //Layout.preferredWidth : 150
+             *        enabled: !geoclueLocationEnabled.checked
+             *        validator: RegularExpressionValidator {
+             *            regularExpression: /^(\+|-)?(?:90(?:(?:\.0{1,7})?)|(?:[0-9]|[1-8][0-9])?(?:(?:\.[0-9]{1,7})?))$/
+        }
         }
 
         TextField {
-            id: latitude // decimals: 7
-            Kirigami.FormData.label: i18n("Latitude:")
-            //Layout.preferredWidth : 150
-            enabled: !geoclueLocationEnabled.checked
-            validator: RegularExpressionValidator {
-                regularExpression: /^(\+|-)?(?:90(?:(?:\.0{1,7})?)|(?:[0-9]|[1-8][0-9])?(?:(?:\.[0-9]{1,7})?))$/
+        id: longitude // decimals: 7
+        Kirigami.FormData.label: i18n("Longitude:")
+        //Layout.preferredWidth : 150
+        enabled: !geoclueLocationEnabled.checked
+        validator: RegularExpressionValidator {
+        regularExpression: /^(\+|-)?(?:180(?:(?:\.0{1,7})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])?(?:(?:\.[0-9]{1,7})?))$/
+        }
+        }*/
+
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: i18n("Temperature")
             }
-            /*validator: DoubleValidator {
-                top: 90
-                bottom: -90
-                decimals: 7;
-                locale: "en"
-                notation: DoubleValidator.StandardNotation
-            }*/
-        }
 
-        TextField {
-            id: longitude // decimals: 7
-            Kirigami.FormData.label: i18n("Longitude:")
-            //Layout.preferredWidth : 150
-            enabled: !geoclueLocationEnabled.checked
-            validator: RegularExpressionValidator {
-                regularExpression: /^(\+|-)?(?:180(?:(?:\.0{1,7})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])?(?:(?:\.[0-9]{1,7})?))$/
-            }
-            /*validator: DoubleValidator {
-                top: 180
-                bottom: -180
-                decimals: 7;
-                locale: "en"
-                notation: DoubleValidator.StandardNotation
-            }*/
-        }
-
-        Button {
-            text: i18n("Locate") // tooltip: i18n("This will use Mozilla Location Service exposed natively in KDE")
-            onClicked: {
-                geolocationDS.connectedSources.length = 0
-                geolocationDS.connectedSources.push(geolocationDS.locationSource)
-            }
-            enabled: !geoclueLocationEnabled.checked
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Temperature")
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("Day:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Slider {
-                id: dayTemperature
-                snapMode: Slider.SnapOnRelease
-                stepSize: -250
-                from : 1000
-                to: 25000
+            RowLayout {
+                Kirigami.FormData.label: i18n("Day:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                //implicitWidth : parent.width / 2
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 28
+
+                Slider {
+                    id: dayTemperature
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: -250
+                    from : 1000
+                    to: 25000
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    //implicitWidth : parent.width / 2
+                }
+                Label {
+                    text: dayTemperature.value + "K"
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                }
             }
-            Label {
-                text: dayTemperature.value + "K"
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+
+            Item {
+                Kirigami.FormData.isSection: true
             }
-        }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("Night:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Slider {
-                id: nightTemperature
-                snapMode: Slider.SnapOnRelease
-                stepSize: -250
-                from : 1000
-                to: 25000
+            RowLayout {
+                Kirigami.FormData.label: i18n("Night:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                //implicitWidth : parent.width / 2
+
+                Slider {
+                    id: nightTemperature
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: -250
+                    from : 1000
+                    to: 25000
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    //implicitWidth : parent.width / 2
+                }
+                Label {
+                    text: nightTemperature.value + "K"
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                }
             }
-            Label {
-                text: nightTemperature.value + "K"
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: i18n("Brightness")
             }
-        }
 
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Brightness")
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("Day:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Slider {
-                id: dayBrightness
-                snapMode: Slider.SnapOnRelease
-                stepSize: 0.05
-                from : 0.2
-                to: 1.0
+            RowLayout {
+                Kirigami.FormData.label: i18n("Day:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                /*ToolTip {
-                    parent: dayBrightness.handle
-                    visible: dayBrightness.pressed
+
+                Slider {
+                    id: dayBrightness
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: 0.05
+                    from : 0.2
+                    to: 1.0
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    /*ToolTip {
+                     *                parent: dayBrightness.handle
+                     *                visible: dayBrightness.pressed
+                     *                text: dayBrightness.value.toFixed(2)
+                }*/
+                }
+                Label {
                     text: dayBrightness.value.toFixed(2)
-                }*/
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                }
             }
-            Label {
-                text: dayBrightness.value.toFixed(2)
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+
+            Item {
+                Kirigami.FormData.isSection: true
             }
-        }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("Night:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Slider {
-                id: nightBrightness
-                snapMode: Slider.SnapOnRelease
-                stepSize: 0.05
-                from : 0.2
-                to: 1.0
+            RowLayout {
+                Kirigami.FormData.label: i18n("Night:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                /*ToolTip {
-                    parent: nightBrightness.handle
-                    visible: nightBrightness.pressed
+                Slider {
+                    id: nightBrightness
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: 0.05
+                    from : 0.2
+                    to: 1.0
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    /*ToolTip {
+                     *                parent: nightBrightness.handle
+                     *                visible: nightBrightness.pressed
+                     *                text: nightBrightness.value.toFixed(2)
+                }*/
+                }
+                Label {
                     text: nightBrightness.value.toFixed(2)
-                }*/
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                }
             }
-            Label {
-                text: nightBrightness.value.toFixed(2)
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: i18n("Gamma")
             }
-        }
 
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Gamma")
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("R:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Slider {
-                id: gammaR
-                snapMode: Slider.SnapOnRelease
-                stepSize: -0.1
-                from : 0.1
-                to: 10
+            RowLayout {
+                Kirigami.FormData.label: i18n("R:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan: 2
-            }
-            TextField {
-                text: gammaR.value.toFixed(7)
-                Layout.preferredWidth: 100
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
-                onEditingFinished: {
-                    gammaR.value = parseFloat(text)
+                Slider {
+                    id: gammaR
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: -0.1
+                    from : 0.1
+                    to: 10
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.columnSpan: 2
                 }
-                validator: DoubleValidator {
-                    top: gammaR.to
-                    bottom: gammaR.from
-                    decimals: 7;
-                    locale: "en"
-                    notation: DoubleValidator.StandardNotation
+                TextField {
+                    text: gammaR.value.toFixed(7)
+                    Layout.preferredWidth: 100
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                    onEditingFinished: {
+                        gammaR.value = parseFloat(text)
+                    }
+                    validator: DoubleValidator {
+                        top: gammaR.to
+                        bottom: gammaR.from
+                        decimals: 7;
+                        locale: "en"
+                        notation: DoubleValidator.StandardNotation
+                    }
                 }
             }
-        }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
+            Item {
+                Kirigami.FormData.isSection: true
+            }
 
-        RowLayout {
-            Kirigami.FormData.label: i18n("G:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Slider {
-                id: gammaG
-                snapMode: Slider.SnapOnRelease
-                stepSize: -0.1
-                from : 0.1
-                to: 10
+            RowLayout {
+                Kirigami.FormData.label: i18n("G:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan: 2
-            }
-            TextField {
-                text: gammaG.value.toFixed(7)
-                Layout.preferredWidth: 100
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
-                onEditingFinished: {
-                    gammaG.value = parseFloat(text)
+                Slider {
+                    id: gammaG
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: -0.1
+                    from : 0.1
+                    to: 10
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.columnSpan: 2
                 }
-                validator: DoubleValidator {
-                    top: gammaG.to
-                    bottom: gammaG.from
-                    decimals: 7;
-                    locale: "en"
-                    notation: DoubleValidator.StandardNotation
+                TextField {
+                    text: gammaG.value.toFixed(7)
+                    Layout.preferredWidth: 100
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                    onEditingFinished: {
+                        gammaG.value = parseFloat(text)
+                    }
+                    validator: DoubleValidator {
+                        top: gammaG.to
+                        bottom: gammaG.from
+                        decimals: 7;
+                        locale: "en"
+                        notation: DoubleValidator.StandardNotation
+                    }
                 }
             }
-        }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
+            Item {
+                Kirigami.FormData.isSection: true
+            }
 
-        RowLayout {
-            Kirigami.FormData.label: i18n("B:")
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Slider {
-                id: gammaB
-                snapMode: Slider.SnapOnRelease
-                stepSize: -0.1
-                from : 0.1
-                to: 10
+            RowLayout {
+                Kirigami.FormData.label: i18n("B:")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.columnSpan: 2
-            }
-            TextField {
-                text: gammaB.value.toFixed(7)
-                Layout.preferredWidth: 100
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
-                onEditingFinished: {
-                    gammaB.value = parseFloat(text)
+                Slider {
+                    id: gammaB
+                    snapMode: Slider.SnapOnRelease
+                    stepSize: -0.1
+                    from : 0.1
+                    to: 10
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.columnSpan: 2
                 }
-                validator: DoubleValidator {
-                    top: gammaB.to
-                    bottom: gammaB.from
-                    decimals: 7;
-                    locale: "en"
-                    notation: DoubleValidator.StandardNotation
+                TextField {
+                    text: gammaB.value.toFixed(7)
+                    Layout.preferredWidth: 100
+                    Layout.alignment: Qt.AlignTop | Qt.AlignLeft
+                    onEditingFinished: {
+                        gammaB.value = parseFloat(text)
+                    }
+                    validator: DoubleValidator {
+                        top: gammaB.to
+                        bottom: gammaB.from
+                        decimals: 7;
+                        locale: "en"
+                        notation: DoubleValidator.StandardNotation
+                    }
                 }
             }
-        }
 
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Mode")
-        }
-
-        GridLayout {
-            Layout.fillWidth: true
-            columns: 4
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: i18n("Mode")
+            }
 
             ComboBox {
                 id: modeCombo
@@ -390,31 +399,26 @@ KCM.SimpleKCM {
                 onTextChanged: modeChanged()
             }
             TextField {
-                id: fakeTextField
-                opacity: 0
-                visible: !renderModeScreen.visible && !renderModeCard.visible
-            } // col 2
-            TextField {
                 id: renderModeCrtc
                 width: advancedConfig / 8
                 placeholderText: i18n("CRTC")
-                opacity: isMode([
+                visible: isMode([
                     'drm',
                     'randr'
                 ])
-                    ? 1
-                    : 0
+                ? 1
+                : 0
                 onTextChanged: modeChanged()
             } // col 4
             CheckBox {
                 id: preserveScreenColour
                 text: i18n("Preserve screen colour")
-                opacity: isMode([
+                visible: isMode([
                     'randr',
                     'vidmode'
                 ])
-                    ? 1
-                    : 0
+                ? 1
+                : 0
                 enabled: parseFloat(versionString) >= 1.11
                 onCheckedChanged: modeChanged()
             }
@@ -432,20 +436,23 @@ KCM.SimpleKCM {
                 ])
                 onTextChanged: cfg_renderModeString = text
             }
+        }
 
-            RowLayout {
-                Layout.columnSpan: parent.columns
-                spacing: 2
-                Layout.alignment: Qt.AlignRight
-                Label {
-                    text: i18n("Redshift version:")
-                    verticalAlignment: Text.AlignVCenter
-                    font.bold: true
-                }
-                Label {
-                    text: versionString
-                    verticalAlignment: Text.AlignVCenter
-                }
+        Kirigami.Separator {
+            Layout.fillWidth: false
+            Layout.margins: Kirigami.Units.largeSpacing
+        }
+
+        RowLayout {
+            Layout.alignment: Qt.AlignRight
+            Label {
+                text: i18n("Redshift version:")
+                verticalAlignment: Text.AlignVCenter
+                font.bold: true
+            }
+            Label {
+                text: versionString
+                verticalAlignment: Text.AlignVCenter
             }
         }
     }
@@ -490,5 +497,4 @@ KCM.SimpleKCM {
             versionString = data.stdout.split(' ')[1]
         }
     }
-
 }

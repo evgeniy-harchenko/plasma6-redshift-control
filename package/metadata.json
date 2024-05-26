@@ -84,7 +84,7 @@
         "Description[zh_TW]": "用來控制 redshift 的 Plasmoid。",
         "Icon": "redshift-status-on",
         "Id": "org.kde.redshiftControl6",
-        "Version": "2.0",
+        "Version": "2.1",
         "License": "GPL2",
         "Website": "https://github.com/evgeniy-harchenko/plasma6-redshift-control"
     },
