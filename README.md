@@ -1,4 +1,12 @@
-# Redshift control applet for the KDE Plasma 6
+<p align="center">
+  <img src="https://link.jpg" width=100/>
+  <h1 align="center">Redshift control applet for the KDE Plasma 6</h1>
+  <p align="center">A simple control widget for KDE Plasma 6</center>
+</p>
+
+<p align="center">
+  <img src="https://link.png"/>
+</p>
 
 ## Build instructions
 
@@ -7,21 +15,21 @@
 - Install redshift.
 
 ### Install for current user (Preferred way)
-1. Download plasmoid
-2. Right click on the desktop
-3. Click on "Add Widgets"
-4. Click on "Get New Widgets"
-5. Click on "Install Widget From Local File"
-6. Select downloaded plasmoid file
-7. Click on "Open"
-
-### Install for current user (Manual)
 1. Right click on the desktop
 2. Click on "Add Widgets"
 3. Click on "Get New Widgets"
 4. Click on "Download New Plasma Widgets"
 5. Search for "Redshift control for Plasma 6"
 6. Click on "Install"
+
+### Install for current user (Manual)
+1. Download [plasma6-redshift-control-**xxx**.plasmoid](https://github.com/evgeniy-harchenko/plasma6-redshift-control/releases/latest)
+2. Right click on the desktop
+3. Click on "Add Widgets"
+4. Click on "Get New Widgets"
+5. Click on "Install Widget From Local File"
+6. Select downloaded plasma6-redshift-control-**xxx**.plasmoid file
+7. Click on "Open"
 
 ### Install for current user (Terminal)
 ```bash
