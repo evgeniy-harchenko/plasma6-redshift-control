@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://link.jpg" width=100/>
+  <img src="https://github.com/evgeniy-harchenko/plasma6-redshift-control/blob/master/assets/logo.png" width=150 />
   <h1 align="center">Redshift control applet for the KDE Plasma 6</h1>
   <p align="center">A simple control widget for KDE Plasma 6</center>
 </p>
 
 <p align="center">
-  <img src="https://link.png"/>
+  <img src="https://github.com/evgeniy-harchenko/plasma6-redshift-control/blob/master/assets/image.png"/>
 </p>
 
 ## Build instructions
