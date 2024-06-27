@@ -47,7 +47,7 @@ kpackagetool6 -u plasma6-redshift-control-<b>xxx</b>.plasmoid -t Plasma/Applet
 </pre>
 where **xxx** is the version of the widget (e.g. 2.1).
 
-### Install for all users
+### Install for all users (Terminal)
 ```bash
 cd /where/your/downloaded/applet/source
 mkdir build && cd build
