@@ -50,6 +50,7 @@ Item {
         anchors.fill: parent
         visible: !plasmoid.configuration.useDefaultIcons
         source: customIconSource
+        color: bulbIconColourCurrent
     }
 
     PlasmaComponents.Label {
@@ -63,15 +64,6 @@ Item {
         color: bulbIconColourCurrent
         font.pixelSize: fontPixelSize
         font.pointSize: -1
-
-        ColorAnimation on color {
-            id: animWheelTemperature; running: false; from: redshiftColour;
-            to: bulbIconColourCurrent; duration: 1000
-        }
-        ColorAnimation on color {
-            id: animWheelBrighness; running: false; from: brightnessColour;
-            to: bulbIconColourCurrent; duration: 1000
-        }
     }
 
     PlasmaComponents.Label {
@@ -90,6 +82,26 @@ Item {
         verticalAlignment: Text.AlignBottom
 
         visible: manualEnabled
+    }
+
+    PropertyAnimation {
+        id: animWheelBrighness
+        targets: [customIcon, bulbIcon]
+        property: "color"
+        running: false;
+        from: brightnessColour;
+        to: bulbIconColourCurrent;
+        duration: 1000
+    }
+
+    PropertyAnimation {
+        id: animWheelTemperature
+        targets: [customIcon, bulbIcon]
+        property: "color"
+        running: false;
+        from: redshiftColour;
+        to: bulbIconColourCurrent;
+        duration: 1000
     }
 
     MouseArea {
