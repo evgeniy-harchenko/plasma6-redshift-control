@@ -6,6 +6,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtPositioning
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 import org.kde.plasma.plasma5support as Plasma5Support
@@ -44,18 +45,16 @@ KCM.SimpleKCM {
         }
     }
 
-    Plasma5Support.DataSource {
-        id: geolocationDS
-        engine: 'geolocation'
+    PositionSource {
+        id: locationProvider
 
-        property string locationSource: 'location'
+        readonly property bool locating: locationProvider.active
+        && locationProvider.sourceError == PositionSource.NoError
+        && !(locationProvider.position.latitudeValid || locationProvider.position.longitudeValid)
 
-        connectedSources: []
-
-        onNewData: (sourceName, data) => {
-            print('geolocation: ' + data.latitude)
-            locationsFixedView.latitudeFixed = data.latitude
-            locationsFixedView.longitudeFixed = data.longitude
+        onPositionChanged: {
+            locationsFixedView.latitudeFixed = Math.round(locationProvider.position.coordinate.latitude * 100) / 100
+            locationsFixedView.longitudeFixed = Math.round(locationProvider.position.coordinate.longitude * 100) / 100
         }
     }
 
@@ -77,12 +76,11 @@ KCM.SimpleKCM {
             }
 
             Button {
-                text: i18n("Locate") // tooltip: i18n("This will use Mozilla Location Service exposed natively in KDE")
+                text: i18n("Locate")
                 onClicked: {
-                    geolocationDS.connectedSources.length = 0
-                    geolocationDS.connectedSources.push(geolocationDS.locationSource)
+                    locationProvider.update(30000)
                 }
-                enabled: !geoclueLocationEnabled.checked
+                enabled: !geoclueLocationEnabled.checked && !locationProvider.locating
             }
         }
 
