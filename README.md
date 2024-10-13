@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/evgeniy-harchenko/plasma6-redshift-control/blob/master/assets/logo.png" width=150 />
-  <h1 align="center">Redshift control applet for the KDE Plasma 6</h1>
-  <p align="center">A simple control widget for KDE Plasma 6. Allows enabling and disabling redshift process. Provides advanced redshift settings and mouse-wheel manual screen temperature, brightness and gamma controlling.</center>
+  <h1 align="center">Gammastep and Redshift control applet for the KDE Plasma 6</h1>
+  <p align="center">A simple control widget for KDE Plasma 6. Allows enabling and disabling gammastep/redshift process. Provides advanced gammastep/redshift settings and mouse-wheel manual screen temperature, brightness and gamma controlling.</center>
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 ### Requirements
 
-- Install redshift.
+- Install gammastep/redshift.
 
 ### Install for current user (Preferred way)
 1. Right click on the desktop
