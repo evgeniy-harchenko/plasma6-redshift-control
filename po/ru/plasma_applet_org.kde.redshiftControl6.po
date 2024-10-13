@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 20:49+0300\n"
-"PO-Revision-Date: 2024-10-13 19:08+0300\n"
+"POT-Creation-Date: 2024-10-13 22:38+0300\n"
+"PO-Revision-Date: 2024-10-13 22:51+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "Language: ru\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 24.08.1\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%10>=2"
+" && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: ../package/contents/config/config.qml:11
 msgid "General"
@@ -103,7 +103,7 @@ msgid "Insert custom mode options"
 msgstr "Введите произвольные опции"
 
 #: ../package/contents/ui/config/ConfigAdvanced.qml:458
-msgid "Redshift version:"
+msgid "%1 version:"
 msgstr "Версия %1:"
 
 #: ../package/contents/ui/config/ConfigGeneral.qml:43

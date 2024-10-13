@@ -455,7 +455,7 @@ KCM.SimpleKCM {
         RowLayout {
             Layout.alignment: Qt.AlignRight
             Label {
-                text: i18n("Redshift version:")
+                text: i18n("%1 version:", backendString)
                 verticalAlignment: Text.AlignVCenter
                 font.bold: true
             }

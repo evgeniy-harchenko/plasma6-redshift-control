@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 20:49+0300\n"
-"PO-Revision-Date: 2024-10-13 19:08+0300\n"
+"POT-Creation-Date: 2024-10-13 22:38+0300\n"
+"PO-Revision-Date: 2024-10-13 22:51+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Slovenian <>\n"
 "Language: sl\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 24.08.1\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
-"n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%"
+"100==4 ? 3 : 0);\n"
 
 #: ../package/contents/config/config.qml:11
 msgid "General"
@@ -102,7 +102,7 @@ msgid "Insert custom mode options"
 msgstr "Vstavi možnosti načina po meri"
 
 #: ../package/contents/ui/config/ConfigAdvanced.qml:458
-msgid "Redshift version:"
+msgid "%1 version:"
 msgstr "%1 različica:"
 
 #: ../package/contents/ui/config/ConfigGeneral.qml:43

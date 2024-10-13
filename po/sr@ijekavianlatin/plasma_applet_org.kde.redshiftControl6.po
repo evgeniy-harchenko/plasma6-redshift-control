@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 20:49+0300\n"
+"POT-Creation-Date: 2024-10-13 22:38+0300\n"
 "PO-Revision-Date: 2016-03-27 01:37+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -104,7 +104,7 @@ msgstr "Umetnite opcije prilagođenog režima"
 
 #: ../package/contents/ui/config/ConfigAdvanced.qml:458
 #, fuzzy
-msgid "Redshift version:"
+msgid "%1 version:"
 msgstr "Izdanje crvenog pomaka"
 
 #: ../package/contents/ui/config/ConfigGeneral.qml:43

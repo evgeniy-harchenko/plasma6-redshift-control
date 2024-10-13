@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 20:49+0300\n"
-"PO-Revision-Date: 2024-10-13 19:08+0300\n"
+"POT-Creation-Date: 2024-10-13 22:38+0300\n"
+"PO-Revision-Date: 2024-10-13 22:50+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "Language: nl\n"
@@ -101,7 +101,7 @@ msgid "Insert custom mode options"
 msgstr "Aangepaste opties voor modus invoegen"
 
 #: ../package/contents/ui/config/ConfigAdvanced.qml:458
-msgid "Redshift version:"
+msgid "%1 version:"
 msgstr "%1-versie:"
 
 #: ../package/contents/ui/config/ConfigGeneral.qml:43

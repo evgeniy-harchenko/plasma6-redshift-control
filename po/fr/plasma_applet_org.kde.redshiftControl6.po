@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.redshiftControl6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 20:49+0300\n"
-"PO-Revision-Date: 2024-10-13 19:10+0300\n"
+"POT-Creation-Date: 2024-10-13 22:38+0300\n"
+"PO-Revision-Date: 2024-10-13 22:48+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "Language: fr\n"
@@ -103,7 +103,7 @@ msgid "Insert custom mode options"
 msgstr "Insérer des options personnalisées de mode"
 
 #: ../package/contents/ui/config/ConfigAdvanced.qml:458
-msgid "Redshift version:"
+msgid "%1 version:"
 msgstr "Version de %1:"
 
 #: ../package/contents/ui/config/ConfigGeneral.qml:43

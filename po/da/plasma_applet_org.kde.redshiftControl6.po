@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 20:49+0300\n"
-"PO-Revision-Date: 2024-10-13 19:08+0300\n"
+"POT-Creation-Date: 2024-10-13 22:38+0300\n"
+"PO-Revision-Date: 2024-10-13 22:46+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Russian <>\n"
 "Language: da\n"
@@ -106,9 +106,8 @@ msgid "Insert custom mode options"
 msgstr "Indsæt valgmuligheder for tilpasset tilstand"
 
 #: ../package/contents/ui/config/ConfigAdvanced.qml:458
-#, fuzzy
-msgid "Redshift version:"
-msgstr "%1-version"
+msgid "%1 version:"
+msgstr "%1-version:"
 
 #: ../package/contents/ui/config/ConfigGeneral.qml:43
 msgid "Backend"
