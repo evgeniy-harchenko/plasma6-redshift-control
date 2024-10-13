@@ -32,6 +32,7 @@ KCM.SimpleKCM {
     property alias cfg_renderModeCrtc: renderModeCrtc.text
     property alias cfg_preserveScreenColour: preserveScreenColour.checked
     property string cfg_renderModeString
+    property string backendString: plasmoid.configuration.backendString
 
     property string versionString: 'N/A'
     property string modeString: ''
@@ -362,6 +363,10 @@ KCM.SimpleKCM {
                         val: ''
                     }
                     ListElement {
+                        text: 'wayland'
+                        val: 'wayland'
+                    }
+                    ListElement {
                         text: 'drm'
                         val: 'drm'
                     }
@@ -464,6 +469,9 @@ KCM.SimpleKCM {
 
     function modeChanged() {
         switch (cfg_renderMode) {
+            case 'wayland':
+                modeString.text = '-m wayland'
+                break
             case 'drm':
                 modeString.text = '-m drm' + (renderModeCard.text.length > 0 ? ':card=' + renderModeCard.text : '') + (renderModeCrtc.text.length > 0 ? ':crtc=' + renderModeCrtc.text : '')
                 break
@@ -490,12 +498,12 @@ KCM.SimpleKCM {
         id: getOptionsDS
         engine: 'executable'
 
-        connectedSources: ['redshift -V']
+        connectedSources: [backendString + ' -V']
 
         onNewData: (sourceName, data) => {
             connectedSources.length = 0
             if (data['exit code'] > 0) {
-                print('Error running redshift with command: ' + sourceName + '   ...stderr: ' + data.stderr)
+                print('Error running ' + backendString + ' with command: ' + sourceName + '   ...stderr: ' + data.stderr)
                 return
             }
             versionString = data.stdout.split(' ')[1]

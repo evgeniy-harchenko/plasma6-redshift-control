@@ -19,8 +19,43 @@ KCM.SimpleKCM {
     property alias cfg_useDefaultIcons: useDefaultIcons.checked
     property string cfg_iconActive: plasmoid.configuration.iconActive
     property string cfg_iconInactive: plasmoid.configuration.iconInactive
+    property string cfg_backendString: plasmoid.configuration.backendString
+
+    onCfg_backendStringChanged: {
+        print('restore: ' + cfg_backendString)
+        var comboIndex = 0 // backendCombo.find(cfg_backendString)
+        for(var i = 0; i < backendCombo.model.count; ++i) {
+            if (backendCombo.model.get(i).val === cfg_backendString) {
+                comboIndex = i
+                break
+            }
+        }
+        print('restore index: ' + comboIndex)
+        if (comboIndex > -1) {
+            backendCombo.currentIndex = comboIndex
+        }
+    }
 
     Kirigami.FormLayout {
+        ComboBox {
+            id: backendCombo
+            textRole: "text"
+            Kirigami.FormData.label: i18n("Backend")
+            model: ListModel {
+                ListElement {
+                    text: 'Redshift'
+                    val: 'redshift'
+                }
+                ListElement {
+                    text: 'Gammastep'
+                    val: 'gammastep'
+                }
+            }
+            onCurrentIndexChanged: {
+                cfg_backendString = model.get(currentIndex).val
+                print('saved: ' + cfg_backendString)
+            }
+        }
         CheckBox {
             id: autostart
             Kirigami.FormData.label: i18n("Autostart")

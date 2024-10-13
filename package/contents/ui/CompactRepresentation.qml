@@ -39,6 +39,8 @@ Item {
     property color redshiftColour: '#ff3c0b'
     property color brightnessColour: '#39a2ee'
 
+    property string backendString: plasmoid.configuration.backendString
+
     property string versionString: 'N/A'
 
     FontLoader {
@@ -192,12 +194,12 @@ Item {
         id: getOptionsDS
         engine: 'executable'
 
-        connectedSources: ['redshift -V']
+        connectedSources: [backendString + ' -V']
 
         onNewData: (sourceName, data) => {
             connectedSources.length = 0
             if (data['exit code'] > 0) {
-                print('Error running redshift with command: ' + sourceName + '   ...stderr: ' + data.stderr)
+                print('Error running ' + backendString + ' with command: ' + sourceName + '   ...stderr: ' + data.stderr)
                 return
             }
             versionString = data.stdout.split(' ')[1]

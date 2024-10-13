@@ -6,6 +6,9 @@
     <kcfgfile name=""/>
 
     <group name="General">
+        <entry name="backendString" type="String">
+            <default>gammastep</default>
+        </entry>
         <entry name="autostart" type="Bool">
             <default>true</default>
         </entry>

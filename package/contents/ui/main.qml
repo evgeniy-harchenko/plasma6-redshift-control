@@ -33,6 +33,7 @@ PlasmoidItem {
     property real gammaR: plasmoid.configuration.gammaR
     property real gammaG: plasmoid.configuration.gammaG
     property real gammaB: plasmoid.configuration.gammaB
+    property string backendString: plasmoid.configuration.backendString
     property string renderMode: plasmoid.configuration.renderMode
     property string renderModeString: plasmoid.configuration.renderModeString
     property bool preserveScreenColour: renderMode === 'randr' || renderMode === 'vidmode' ? plasmoid.configuration.preserveScreenColour : false
@@ -55,9 +56,9 @@ PlasmoidItem {
     property string modeCmdPart: renderModeString === '' ? '' : ' ' + renderModeString
 
     // - commands
-    property string redshiftCommand: 'redshift' + locationCmdPart + modeCmdPart + ' -t ' + dayTemperature + ':' + nightTemperature + brightnessAndGamma + (smoothTransitions ? '' : ' -r')
+    property string redshiftCommand: backendString + locationCmdPart + modeCmdPart + ' -t ' + dayTemperature + ':' + nightTemperature + brightnessAndGamma + (smoothTransitions ? '' : ' -r')
     property string redshiftOneTimeBrightnessAndGamma: ' -b ' + (currentBrightness * 0.01).toFixed(2) + ':' + (currentBrightness * 0.01).toFixed(2) + ' -g ' + gammaR + ':' + gammaG + ':' + gammaB
-    property string redshiftOneTimeCommand: 'redshift' + modeCmdPart + ' -PO ' + manualTemperature + redshiftOneTimeBrightnessAndGamma + ' -r'
+    property string redshiftOneTimeCommand: backendString + modeCmdPart + ' -PO ' + manualTemperature + redshiftOneTimeBrightnessAndGamma + ' -r'
     property string redshiftPrintCommand: 'LANG=C ' + redshiftCommand + ' -p'
 
     //property bool inTray: (plasmoid.parent === null || plasmoid.parent.objectName === 'taskItemContainer')
@@ -94,14 +95,14 @@ PlasmoidItem {
         if (redshiftDS.connectedSources.length > 0) {
             stopRedshift()
         } else {
-            print('enabling redshift with command: ' + redshiftCommand)
+            print('enabling ' + backendString + ' with command: ' + redshiftCommand)
             redshiftDS.connectedSources.push(redshiftCommand)
             active = true
         }
     }
 
     function stopRedshift() {
-        print('disabling redshift')
+        print('disabling ' + backendString)
         redshiftDS.removeSource(redshiftCommand)
         redshiftDS.connectedSources.push(redshiftDS.redshiftStopSource)
         active = false
@@ -126,7 +127,7 @@ PlasmoidItem {
         id: redshiftDS
         engine: 'executable'
 
-        property string redshiftStopSource: preserveScreenColour ? 'pkill -USR1 redshift; killall redshift' : 'killall redshift; redshift -x'
+        property string redshiftStopSource: preserveScreenColour ? 'pkill -USR1 ' + backendString + '; killall ' + backendString + '' : 'killall ' + backendString + '; ' + backendString + ' -x'
 
         connectedSources: [redshiftStopSource]
 
@@ -142,13 +143,13 @@ PlasmoidItem {
             }
 
             if (data['exit code'] > 0) {
-                print('Error running redshift with command: ' + sourceName + '   ...stderr: ' + data.stderr)
+                print('Error running ' + backendString + ' with command: ' + sourceName + '   ...stderr: ' + data.stderr)
 
                 var service = notificationsDS.serviceForSource('notifications')
                 var operation = service.operationDescription('createNotification')
-                operation.appName = 'Redshift Control'
+                operation.appName = backendString + ' Control'
                 operation.appIcon = 'redshift-status-on'
-                operation.summary = 'Error running Redshift command'
+                operation.summary = 'Error running ' + backendString + ' command'
                 operation.body = data.stderr
                 service.startOperationCall(operation)
 
@@ -173,14 +174,14 @@ PlasmoidItem {
 
         onNewData: (sourceName, data) => {
             if (data['exit code'] > 0) {
-                print('Error running redshift print cmd with command: ' + sourceName + '   ...stderr: ' + data.stderr)
+                print('Error running ' + backendString + ' print cmd with command: ' + sourceName + '   ...stderr: ' + data.stderr)
                 return
             }
 
             // example output: "Color temperature: 5930K"
-            var matchTemperature = /Color temperature: ([0-9]+)K/.exec(data.stdout)
+            var matchTemperature = /Color temperature: ([0-9]+)K/.exec(backendString === "gammastep" ? data.stderr : data.stdout)
             // example output: "Brightness: 1.0"
-            var matchBrightness = /Brightness: ([0-9]+\.[0-9]+)/.exec(data.stdout)
+            var matchBrightness = /Brightness: ([0-9]+\.[0-9]+)/.exec(backendString === "gammastep" ? data.stderr : data.stdout)
             if (matchTemperature !== null) {
                 currentTemperature = parseInt(matchTemperature[1])
             }
@@ -244,6 +245,7 @@ PlasmoidItem {
     onManualTemperatureChanged: updateTooltip()
     onManualBrightnessChanged: updateTooltip()
     onCurrentTemperatureChanged: updateTooltip()
+    onCurrentBrightnessChanged: updateTooltip()
 
     /*toolTipMainText: i18n("Redshift Control")
     toolTipSubText: ''
