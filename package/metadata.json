@@ -4,6 +4,10 @@
             {
                 "Email": "clearmartin@seznam.cz",
                 "Name": "Kotelnik"
+            },
+            {
+                "Email": "evgeniyharchenko.dev@gmail.com",
+                "Name": "Evgeniy Harchenko"
             }
         ],
         "Category": "Graphics",
@@ -84,7 +88,7 @@
         "Description[zh_TW]": "用來控制 redshift 的 Plasmoid。",
         "Icon": "redshift-status-on",
         "Id": "org.kde.redshiftControl6",
-        "Version": "2.1",
+        "Version": "2.2",
         "License": "GPL2",
         "Website": "https://github.com/evgeniy-harchenko/plasma6-redshift-control"
     },
