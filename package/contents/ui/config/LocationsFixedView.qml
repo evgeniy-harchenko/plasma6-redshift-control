@@ -81,7 +81,7 @@ Kirigami.FormLayout {
                     // https://bugs.kde.org/show_bug.cgi?id=435671
                     text: i18n("Zoom in")
                     display: QQC2.AbstractButton.IconOnly
-                    icon.name: "list-add"
+                    icon.name: "zoom-in"
                     activeFocusOnTab: false
                     onClicked: {
                         if (mapRect.currentScale < 5) {
@@ -94,7 +94,7 @@ Kirigami.FormLayout {
                         }
                     }
                     onDoubleClicked: {
-                        onClicked();
+                        onClicked;
                     }
                     QQC2.ToolTip {
                         text: parent.text
@@ -106,7 +106,7 @@ Kirigami.FormLayout {
                     // https://bugs.kde.org/show_bug.cgi?id=435671
                     text: i18n("Zoom out")
                     display: QQC2.AbstractButton.IconOnly
-                    icon.name: "list-remove"
+                    icon.name: "zoom-out"
                     activeFocusOnTab: false
                     onClicked: {
                         if (mapRect.currentScale > 1) {
@@ -119,7 +119,7 @@ Kirigami.FormLayout {
                         }
                     }
                     onDoubleClicked: {
-                        onClicked();
+                        onClicked;
                     }
                     QQC2.ToolTip {
                         text: parent.text
