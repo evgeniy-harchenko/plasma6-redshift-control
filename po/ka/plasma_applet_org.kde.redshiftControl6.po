@@ -1,22 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-redshift-control package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma6-redshift-control\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-09 00:48+0000\n"
-"PO-Revision-Date: 2022-12-10 06:16+0100\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-13 19:08+0300\n"
+"Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
+"Language-Team: Georgian <>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: package/contents/config/config.qml:11
 msgid "General"
@@ -103,7 +102,7 @@ msgstr "ხელით მითითებული რეჟიმის პ
 
 #: package/contents/ui/config/ConfigAdvanced.qml:346
 msgid "Redshift version:"
-msgstr "Redshift -ის ვერსია:"
+msgstr "%1 -ის ვერსია:"
 
 #: ui/LocationsFixedView.qml:72
 #, kde-format
