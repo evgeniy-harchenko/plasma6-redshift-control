@@ -1,3 +1,5 @@
 build
 update-translations.sh
 buildWidget
+po/index.lokalize
+po/main.lqa
