@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.redshiftControl6\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 20:49+0300\n"
 "PO-Revision-Date: 2024-10-13 19:08+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Slovak <>\n"
@@ -17,203 +17,210 @@ msgstr ""
 "X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: package/contents/config/config.qml:11
+#: ../package/contents/config/config.qml:11
 msgid "General"
 msgstr "Všeobecné"
 
-#: package/contents/config/config.qml:16
+#: ../package/contents/config/config.qml:16
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:63
+#: ../package/contents/ui/config/ConfigAdvanced.qml:77
 msgid "Location"
 msgstr "Umiestnenie"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:69
+#: ../package/contents/ui/config/ConfigAdvanced.qml:82
 msgid "Automatic (geoclue)"
 msgstr "Automatické (geoclue)"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:73
-msgid "Latitude:"
-msgstr "Zemepisná šírka:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:89
+#: ../package/contents/ui/config/ConfigAdvanced.qml:86
 msgid "Locate"
 msgstr "Lokalizovať"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:90
-msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "Toto použije Mozilla službu umiestnenia dostupnú v KDE"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:101
-msgid "Longitude:"
-msgstr "Zemepisná dĺžka:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:123
+#: ../package/contents/ui/config/ConfigAdvanced.qml:138
 msgid "Temperature"
 msgstr "Teplota"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:128
-#: package/contents/ui/main.qml:193
-msgid "Brightness"
-msgstr "Jas"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:134
-#: package/contents/ui/config/ConfigAdvanced.qml:147
+#: ../package/contents/ui/config/ConfigAdvanced.qml:142
+#: ../package/contents/ui/config/ConfigAdvanced.qml:194
 msgid "Day:"
 msgstr "Deň:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:160
-#: package/contents/ui/config/ConfigAdvanced.qml:173
+#: ../package/contents/ui/config/ConfigAdvanced.qml:168
+#: ../package/contents/ui/config/ConfigAdvanced.qml:223
 msgid "Night:"
 msgstr "Noc:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:191
+#: ../package/contents/ui/config/ConfigAdvanced.qml:190
+#: ../package/contents/ui/main.qml:207
+msgid "Brightness"
+msgstr "Jas"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:248
 msgid "Gamma"
 msgstr "Gama"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:196
-msgid "RGB:"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:252
+#, fuzzy
+msgid "R:"
 msgstr "RGB:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:231
+#: ../package/contents/ui/config/ConfigAdvanced.qml:287
+#, fuzzy
+msgid "G:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:322
+#, fuzzy
+msgid "B:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:354
 msgid "Mode"
 msgstr "Režim"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:270
+#: ../package/contents/ui/config/ConfigAdvanced.qml:394
 msgid "Screen"
 msgstr "Obrazovka"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:276
+#: ../package/contents/ui/config/ConfigAdvanced.qml:403
 msgid "Card"
 msgstr "Karta"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:290
+#: ../package/contents/ui/config/ConfigAdvanced.qml:413
 msgid "CRTC"
 msgstr "CRTC"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:298
+#: ../package/contents/ui/config/ConfigAdvanced.qml:424
 msgid "Preserve screen colour"
 msgstr "Zachovať farbu obrazovky"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:306
+#: ../package/contents/ui/config/ConfigAdvanced.qml:436
 msgid "Insert custom mode options"
 msgstr "Vložiť možnosti vlastného režimu"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:346
+#: ../package/contents/ui/config/ConfigAdvanced.qml:458
 #, fuzzy
-#| msgid "Redshift version"
 msgid "Redshift version:"
 msgstr "Verzia %1"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
+#: ../package/contents/ui/config/ConfigGeneral.qml:43
+msgid "Backend"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:61
+msgid "Autostart"
+msgstr "Automatické spustenie"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:66
+msgid "Smooth transitions"
+msgstr "Plynulé prechody"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:74
+msgid "Manual temperature step:"
+msgstr "Krok ručnej teploty jasu:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:109
+msgid "Manual brightness step:"
+msgstr "Krok ručného jasu:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:135
+msgid "Use default icons"
+msgstr "Používať predvolené ikony"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:140
+msgid "Active:"
+msgstr "Aktívne:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:149
+msgid "Inactive:"
+msgstr "Neaktívne:"
+
+#: ../package/contents/ui/config/IconPicker.qml:81
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose..."
+msgstr "Vybrať..."
+
+#: ../package/contents/ui/config/IconPicker.qml:87
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Vymazať ikonu"
+
+#: ../package/contents/ui/config/LocationsFixedView.qml:41
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "Ťuknutím vyberte svoju polohu na mape."
 
-#: ui/LocationsFixedView.qml:73
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:42
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "Kliknutím vyberte svoju polohu na mape."
 
-#: ui/LocationsFixedView.qml:112
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:82
 msgid "Zoom in"
 msgstr "Priblížiť"
 
-#: ui/LocationsFixedView.qml:128
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#: ../package/contents/ui/config/LocationsFixedView.qml:107
+#, fuzzy
 msgid "Zoom out"
 msgstr "Priblížiť"
 
-#: ui/LocationsFixedView.qml:225
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"Upravené z <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>Mapa polohy sveta</link> od "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
+#: ../package/contents/ui/config/LocationsFixedView.qml:226
+msgid "Latitude:"
+msgstr "Zemepisná šírka:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:21
-msgid "Plasmoid version"
-msgstr "Verzia plazmoidu"
+#: ../package/contents/ui/config/LocationsFixedView.qml:240
+msgid "Longitude:"
+msgstr "Zemepisná dĺžka:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:31
-msgid "Autostart"
-msgstr "Automatické spustenie"
+#: ../package/contents/ui/main.qml:74
+msgid "Redshift Control"
+msgstr "Ovládanie Redshift"
 
-#: package/contents/ui/config/ConfigGeneral.qml:37
-msgid "Smooth transitions"
-msgstr "Plynulé prechody"
-
-#: package/contents/ui/config/ConfigGeneral.qml:48
-msgid "Manual temperature step:"
-msgstr "Krok ručnej teploty jasu:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:61
-msgid "Manual brightness step:"
-msgstr "Krok ručného jasu:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:81
-msgid "Use default icons"
-msgstr "Používať predvolené ikony"
-
-#: package/contents/ui/config/ConfigGeneral.qml:86
-msgid "Active:"
-msgstr "Aktívne:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:99
-msgid "Inactive:"
-msgstr "Neaktívne:"
-
-#: package/contents/ui/config/IconPicker.qml:73
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr "Vybrať..."
-
-#: package/contents/ui/config/IconPicker.qml:78
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Vymazať ikonu"
-
-#: package/contents/ui/main.qml:190
+#: ../package/contents/ui/main.qml:204
 msgid "Turned on"
 msgstr "Zapnuté"
 
-#: package/contents/ui/main.qml:193
+#: ../package/contents/ui/main.qml:207
 msgid "Manual temperature"
 msgstr "Ručná teplota"
 
-#: package/contents/ui/main.qml:195
+#: ../package/contents/ui/main.qml:209
 msgid "Turned off"
 msgstr "Vypnuté"
 
-#: package/contents/ui/main.qml:200
+#: ../package/contents/ui/main.qml:214
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
 "Použite ľavý / stredný klik a koliesko myši na spravovanie teploty a jasu "
 "obrazovky"
 
-#: package/contents/ui/main.qml:203
+#: ../package/contents/ui/main.qml:217
 msgid "Mouse wheel controls software brightness"
 msgstr "Koliesko myši ovláda jas softvéru"
 
-#: package/contents/ui/main.qml:205
+#: ../package/contents/ui/main.qml:219
 msgid "Mouse wheel controls screen temperature"
 msgstr "Koliesko myši ovláda teplotu obrazovky"
 
-#: package/contents/ui/main.qml:229
-msgid "Redshift Control"
-msgstr "Ovládanie Redshift"
+#~ msgid "This will use Mozilla Location Service exposed natively in KDE"
+#~ msgstr "Toto použije Mozilla službu umiestnenia dostupnú v KDE"
+
+#, kde-kuit-format
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "Upravené z <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>Mapa polohy sveta</link> od "
+#~ "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+
+#~ msgid "Plasmoid version"
+#~ msgstr "Verzia plazmoidu"

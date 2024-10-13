@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma6-redshift-control\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 20:49+0300\n"
 "PO-Revision-Date: 2024-10-13 19:08+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Korean <>\n"
@@ -19,199 +19,207 @@ msgstr ""
 "X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: package/contents/config/config.qml:11
+#: ../package/contents/config/config.qml:11
 msgid "General"
 msgstr "일반"
 
-#: package/contents/config/config.qml:16
+#: ../package/contents/config/config.qml:16
 msgid "Advanced"
 msgstr "고급"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:63
+#: ../package/contents/ui/config/ConfigAdvanced.qml:77
 msgid "Location"
 msgstr "위치"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:69
+#: ../package/contents/ui/config/ConfigAdvanced.qml:82
 msgid "Automatic (geoclue)"
 msgstr "자동(geoclue)"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:73
-msgid "Latitude:"
-msgstr "위도:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:89
+#: ../package/contents/ui/config/ConfigAdvanced.qml:86
 msgid "Locate"
 msgstr "찾기"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:90
-msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "KDE에서 네이티브로 지원하는 Mozilla 위치 서비스를 사용합니다"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:101
-msgid "Longitude:"
-msgstr "경도:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:123
+#: ../package/contents/ui/config/ConfigAdvanced.qml:138
 msgid "Temperature"
 msgstr "온도"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:128
-#: package/contents/ui/main.qml:193
-msgid "Brightness"
-msgstr "밝기"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:134
-#: package/contents/ui/config/ConfigAdvanced.qml:147
+#: ../package/contents/ui/config/ConfigAdvanced.qml:142
+#: ../package/contents/ui/config/ConfigAdvanced.qml:194
 msgid "Day:"
 msgstr "낮:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:160
-#: package/contents/ui/config/ConfigAdvanced.qml:173
+#: ../package/contents/ui/config/ConfigAdvanced.qml:168
+#: ../package/contents/ui/config/ConfigAdvanced.qml:223
 msgid "Night:"
 msgstr "밤:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:191
+#: ../package/contents/ui/config/ConfigAdvanced.qml:190
+#: ../package/contents/ui/main.qml:207
+msgid "Brightness"
+msgstr "밝기"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:248
 msgid "Gamma"
 msgstr "감마"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:196
-msgid "RGB:"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:252
+#, fuzzy
+msgid "R:"
 msgstr "RGB:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:231
+#: ../package/contents/ui/config/ConfigAdvanced.qml:287
+#, fuzzy
+msgid "G:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:322
+#, fuzzy
+msgid "B:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:354
 msgid "Mode"
 msgstr "모드"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:270
+#: ../package/contents/ui/config/ConfigAdvanced.qml:394
 msgid "Screen"
 msgstr "스크린"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:276
+#: ../package/contents/ui/config/ConfigAdvanced.qml:403
 msgid "Card"
 msgstr "카드"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:290
+#: ../package/contents/ui/config/ConfigAdvanced.qml:413
 msgid "CRTC"
 msgstr "CRTC"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:298
+#: ../package/contents/ui/config/ConfigAdvanced.qml:424
 msgid "Preserve screen colour"
 msgstr "화면 색상 유지"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:306
+#: ../package/contents/ui/config/ConfigAdvanced.qml:436
 msgid "Insert custom mode options"
 msgstr "사용자 정의 모드 옵션 삽입"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:346
+#: ../package/contents/ui/config/ConfigAdvanced.qml:458
 msgid "Redshift version:"
 msgstr "%1 버전:"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
+#: ../package/contents/ui/config/ConfigGeneral.qml:43
+msgid "Backend"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:61
+msgid "Autostart"
+msgstr "자동 시작"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:66
+msgid "Smooth transitions"
+msgstr "부드러운 전환"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:74
+msgid "Manual temperature step:"
+msgstr "수동 색온도 단계:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:109
+msgid "Manual brightness step:"
+msgstr "수동 밝기 단계:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:135
+msgid "Use default icons"
+msgstr "기본 아이콘 사용"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:140
+msgid "Active:"
+msgstr "활성:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:149
+msgid "Inactive:"
+msgstr "비활성:"
+
+#: ../package/contents/ui/config/IconPicker.qml:81
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose..."
+msgstr "선택..."
+
+#: ../package/contents/ui/config/IconPicker.qml:87
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "아이콘 지우기"
+
+#: ../package/contents/ui/config/LocationsFixedView.qml:41
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "탭하여 지도에서 위치를 선택하십시오."
 
-#: ui/LocationsFixedView.qml:73
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:42
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "클릭하여 지도에서 위치를 선택하십시오."
 
-#: ui/LocationsFixedView.qml:112
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:82
 msgid "Zoom in"
 msgstr "확대"
 
-#: ui/LocationsFixedView.qml:128
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#: ../package/contents/ui/config/LocationsFixedView.qml:107
+#, fuzzy
 msgid "Zoom out"
 msgstr "확대"
 
-#: ui/LocationsFixedView.qml:225
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"위키미디어 공용의 TUBS 사용자가 제작한 <link url='https://commons.wikimedia."
-"org/wiki/File:World_location_map_(equirectangular_180).svg'>세계 위치 지도</"
-"link>에서 수정됨. <link url='https://creativecommons.org/licenses/by-"
-"sa/3.0'>CC BY-SA 3.0</link>으로 라이선스됨"
+#: ../package/contents/ui/config/LocationsFixedView.qml:226
+msgid "Latitude:"
+msgstr "위도:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:21
-msgid "Plasmoid version"
-msgstr "Plasmoid 버전"
+#: ../package/contents/ui/config/LocationsFixedView.qml:240
+msgid "Longitude:"
+msgstr "경도:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:31
-msgid "Autostart"
-msgstr "자동 시작"
+#: ../package/contents/ui/main.qml:74
+msgid "Redshift Control"
+msgstr "Redshift 제어"
 
-#: package/contents/ui/config/ConfigGeneral.qml:37
-msgid "Smooth transitions"
-msgstr "부드러운 전환"
-
-#: package/contents/ui/config/ConfigGeneral.qml:48
-msgid "Manual temperature step:"
-msgstr "수동 색온도 단계:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:61
-msgid "Manual brightness step:"
-msgstr "수동 밝기 단계:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:81
-msgid "Use default icons"
-msgstr "기본 아이콘 사용"
-
-#: package/contents/ui/config/ConfigGeneral.qml:86
-msgid "Active:"
-msgstr "활성:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:99
-msgid "Inactive:"
-msgstr "비활성:"
-
-#: package/contents/ui/config/IconPicker.qml:73
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr "선택..."
-
-#: package/contents/ui/config/IconPicker.qml:78
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "아이콘 지우기"
-
-#: package/contents/ui/main.qml:190
+#: ../package/contents/ui/main.qml:204
 msgid "Turned on"
 msgstr "켜짐"
 
-#: package/contents/ui/main.qml:193
+#: ../package/contents/ui/main.qml:207
 msgid "Manual temperature"
 msgstr "수동 색온도"
 
-#: package/contents/ui/main.qml:195
+#: ../package/contents/ui/main.qml:209
 msgid "Turned off"
 msgstr "꺼짐"
 
-#: package/contents/ui/main.qml:200
+#: ../package/contents/ui/main.qml:214
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr "왼쪽/가운데 클릭 및 휠을 사용 하여 화면 색온도 및 밝기 관리"
 
-#: package/contents/ui/main.qml:203
+#: ../package/contents/ui/main.qml:217
 msgid "Mouse wheel controls software brightness"
 msgstr "마우스 휠로 소프트웨어 밝기 제어"
 
-#: package/contents/ui/main.qml:205
+#: ../package/contents/ui/main.qml:219
 msgid "Mouse wheel controls screen temperature"
 msgstr "마우스 휠로 화면 색온도를 제어"
 
-#: package/contents/ui/main.qml:229
-msgid "Redshift Control"
-msgstr "Redshift 제어"
+#~ msgid "This will use Mozilla Location Service exposed natively in KDE"
+#~ msgstr "KDE에서 네이티브로 지원하는 Mozilla 위치 서비스를 사용합니다"
+
+#, kde-kuit-format
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "위키미디어 공용의 TUBS 사용자가 제작한 <link url='https://commons."
+#~ "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>세"
+#~ "계 위치 지도</link>에서 수정됨. <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>으로 라이선스됨"
+
+#~ msgid "Plasmoid version"
+#~ msgstr "Plasmoid 버전"

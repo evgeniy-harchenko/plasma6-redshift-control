@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 20:49+0300\n"
 "PO-Revision-Date: 2024-10-13 19:08+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Russian <>\n"
@@ -15,203 +15,211 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma6-redshift-control/plasma_applet_org"
-".kde.redshiftControl6.pot\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma6-redshift-control/"
+"plasma_applet_org.kde.redshiftControl6.pot\n"
 "X-Crowdin-File-ID: 10198\n"
 "X-Generator: Lokalize 24.08.1\n"
 
-#: package/contents/config/config.qml:11
+#: ../package/contents/config/config.qml:11
 msgid "General"
 msgstr "常规"
 
-#: package/contents/config/config.qml:16
+#: ../package/contents/config/config.qml:16
 msgid "Advanced"
 msgstr "高级"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:63
+#: ../package/contents/ui/config/ConfigAdvanced.qml:77
 msgid "Location"
 msgstr "位置"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:69
+#: ../package/contents/ui/config/ConfigAdvanced.qml:82
 msgid "Automatic (geoclue)"
 msgstr "自动 (geoclue)"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:73
-msgid "Latitude:"
-msgstr "纬度："
-
-#: package/contents/ui/config/ConfigAdvanced.qml:89
+#: ../package/contents/ui/config/ConfigAdvanced.qml:86
 msgid "Locate"
 msgstr "定位"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:90
-msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "这将会使用在 KDE 中原生使用的 Mozilla 定位服务"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:101
-msgid "Longitude:"
-msgstr "经度："
-
-#: package/contents/ui/config/ConfigAdvanced.qml:123
+#: ../package/contents/ui/config/ConfigAdvanced.qml:138
 msgid "Temperature"
 msgstr "温度"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:128
-#: package/contents/ui/main.qml:193
-msgid "Brightness"
-msgstr "亮度"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:134
-#: package/contents/ui/config/ConfigAdvanced.qml:147
+#: ../package/contents/ui/config/ConfigAdvanced.qml:142
+#: ../package/contents/ui/config/ConfigAdvanced.qml:194
 msgid "Day:"
 msgstr "白天："
 
-#: package/contents/ui/config/ConfigAdvanced.qml:160
-#: package/contents/ui/config/ConfigAdvanced.qml:173
+#: ../package/contents/ui/config/ConfigAdvanced.qml:168
+#: ../package/contents/ui/config/ConfigAdvanced.qml:223
 msgid "Night:"
 msgstr "夜晚："
 
-#: package/contents/ui/config/ConfigAdvanced.qml:191
+#: ../package/contents/ui/config/ConfigAdvanced.qml:190
+#: ../package/contents/ui/main.qml:207
+msgid "Brightness"
+msgstr "亮度"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:248
 msgid "Gamma"
 msgstr "伽玛分布"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:196
-msgid "RGB:"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:252
+#, fuzzy
+msgid "R:"
 msgstr "RGB："
 
-#: package/contents/ui/config/ConfigAdvanced.qml:231
+#: ../package/contents/ui/config/ConfigAdvanced.qml:287
+#, fuzzy
+msgid "G:"
+msgstr "RGB："
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:322
+#, fuzzy
+msgid "B:"
+msgstr "RGB："
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:354
 msgid "Mode"
 msgstr "模式"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:270
+#: ../package/contents/ui/config/ConfigAdvanced.qml:394
 msgid "Screen"
 msgstr "屏幕"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:276
+#: ../package/contents/ui/config/ConfigAdvanced.qml:403
 msgid "Card"
 msgstr "卡片"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:290
+#: ../package/contents/ui/config/ConfigAdvanced.qml:413
 msgid "CRTC"
 msgstr "CRTC"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:298
+#: ../package/contents/ui/config/ConfigAdvanced.qml:424
 msgid "Preserve screen colour"
 msgstr "保留屏幕色彩"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:306
+#: ../package/contents/ui/config/ConfigAdvanced.qml:436
 msgid "Insert custom mode options"
 msgstr "插入自定义模式选项"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:346
+#: ../package/contents/ui/config/ConfigAdvanced.qml:458
 msgid "Redshift version:"
 msgstr "%1 版本："
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
+#: ../package/contents/ui/config/ConfigGeneral.qml:43
+msgid "Backend"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:61
+msgid "Autostart"
+msgstr "自动启动"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:66
+msgid "Smooth transitions"
+msgstr "平滑过渡"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:74
+msgid "Manual temperature step:"
+msgstr "手动温阶："
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:109
+msgid "Manual brightness step:"
+msgstr "手动亮阶："
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:135
+msgid "Use default icons"
+msgstr "使用默认图标"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:140
+msgid "Active:"
+msgstr "活动："
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:149
+msgid "Inactive:"
+msgstr "未活动："
+
+#: ../package/contents/ui/config/IconPicker.qml:81
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose..."
+msgstr "选择..."
+
+#: ../package/contents/ui/config/IconPicker.qml:87
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "清除图标"
+
+#: ../package/contents/ui/config/LocationsFixedView.qml:41
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "点击地图以选择您的位置。"
 
-#: ui/LocationsFixedView.qml:73
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:42
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "点击地图以选择您的位置。"
 
-#: ui/LocationsFixedView.qml:112
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:82
 msgid "Zoom in"
 msgstr "放大"
 
-#: ui/LocationsFixedView.qml:128
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:107
 msgid "Zoom out"
 msgstr "缩小"
 
-#: ui/LocationsFixedView.qml:225
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"基于 TUBS 制作的<link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>世界位置地图</link> / "
-"Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-"
-"sa/3.0'>CC BY-SA 3.0</link>"
+#: ../package/contents/ui/config/LocationsFixedView.qml:226
+msgid "Latitude:"
+msgstr "纬度："
 
-#: package/contents/ui/config/ConfigGeneral.qml:21
-msgid "Plasmoid version"
-msgstr "Plasmoid 版本"
+#: ../package/contents/ui/config/LocationsFixedView.qml:240
+msgid "Longitude:"
+msgstr "经度："
 
-#: package/contents/ui/config/ConfigGeneral.qml:31
-msgid "Autostart"
-msgstr "自动启动"
+#: ../package/contents/ui/main.qml:74
+msgid "Redshift Control"
+msgstr "Redshift 控制"
 
-#: package/contents/ui/config/ConfigGeneral.qml:37
-msgid "Smooth transitions"
-msgstr "平滑过渡"
-
-#: package/contents/ui/config/ConfigGeneral.qml:48
-msgid "Manual temperature step:"
-msgstr "手动温阶："
-
-#: package/contents/ui/config/ConfigGeneral.qml:61
-msgid "Manual brightness step:"
-msgstr "手动亮阶："
-
-#: package/contents/ui/config/ConfigGeneral.qml:81
-msgid "Use default icons"
-msgstr "使用默认图标"
-
-#: package/contents/ui/config/ConfigGeneral.qml:86
-msgid "Active:"
-msgstr "活动："
-
-#: package/contents/ui/config/ConfigGeneral.qml:99
-msgid "Inactive:"
-msgstr "未活动："
-
-#: package/contents/ui/config/IconPicker.qml:73
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr "选择..."
-
-#: package/contents/ui/config/IconPicker.qml:78
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "清除图标"
-
-#: package/contents/ui/main.qml:190
+#: ../package/contents/ui/main.qml:204
 msgid "Turned on"
 msgstr "已开启"
 
-#: package/contents/ui/main.qml:193
+#: ../package/contents/ui/main.qml:207
 msgid "Manual temperature"
 msgstr "手动色温"
 
-#: package/contents/ui/main.qml:195
+#: ../package/contents/ui/main.qml:209
 msgid "Turned off"
 msgstr "已关闭"
 
-#: package/contents/ui/main.qml:200
+#: ../package/contents/ui/main.qml:214
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr "使用左键/中键点击与滚轮来控制屏幕色温与亮度"
 
-#: package/contents/ui/main.qml:203
+#: ../package/contents/ui/main.qml:217
 msgid "Mouse wheel controls software brightness"
 msgstr "鼠标滚轮控制软件亮度"
 
-#: package/contents/ui/main.qml:205
+#: ../package/contents/ui/main.qml:219
 msgid "Mouse wheel controls screen temperature"
 msgstr "鼠标滚轮控制屏幕色温"
 
-#: package/contents/ui/main.qml:229
-msgid "Redshift Control"
-msgstr "Redshift 控制"
+#~ msgid "This will use Mozilla Location Service exposed natively in KDE"
+#~ msgstr "这将会使用在 KDE 中原生使用的 Mozilla 定位服务"
+
+#, kde-kuit-format
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "基于 TUBS 制作的<link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>世界位置地图</link> / "
+#~ "Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-"
+#~ "sa/3.0'>CC BY-SA 3.0</link>"
+
+#~ msgid "Plasmoid version"
+#~ msgstr "Plasmoid 版本"

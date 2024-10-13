@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 20:49+0300\n"
 "PO-Revision-Date: 2024-10-13 19:08+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Polish <>\n"
@@ -16,205 +16,213 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 |"
-"| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 24.08.1\n"
 
-#: package/contents/config/config.qml:11
+#: ../package/contents/config/config.qml:11
 msgid "General"
 msgstr "Ogólne"
 
-#: package/contents/config/config.qml:16
+#: ../package/contents/config/config.qml:16
 msgid "Advanced"
 msgstr "Rozszerzone"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:63
+#: ../package/contents/ui/config/ConfigAdvanced.qml:77
 msgid "Location"
 msgstr "Lokalizacja"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:69
+#: ../package/contents/ui/config/ConfigAdvanced.qml:82
 msgid "Automatic (geoclue)"
 msgstr "Automatyczna (geoclue)"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:73
-msgid "Latitude:"
-msgstr "Szerokość geograficzna:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:89
+#: ../package/contents/ui/config/ConfigAdvanced.qml:86
 msgid "Locate"
 msgstr "Zlokalizuj"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:90
-msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "Zostaną wykorzystane Usługi Lokalizacji Mozilli"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:101
-msgid "Longitude:"
-msgstr "Długość geograficzna:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:123
+#: ../package/contents/ui/config/ConfigAdvanced.qml:138
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:128
-#: package/contents/ui/main.qml:193
-msgid "Brightness"
-msgstr "Jasność"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:134
-#: package/contents/ui/config/ConfigAdvanced.qml:147
+#: ../package/contents/ui/config/ConfigAdvanced.qml:142
+#: ../package/contents/ui/config/ConfigAdvanced.qml:194
 msgid "Day:"
 msgstr "Dzień:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:160
-#: package/contents/ui/config/ConfigAdvanced.qml:173
+#: ../package/contents/ui/config/ConfigAdvanced.qml:168
+#: ../package/contents/ui/config/ConfigAdvanced.qml:223
 msgid "Night:"
 msgstr "Noc:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:191
+#: ../package/contents/ui/config/ConfigAdvanced.qml:190
+#: ../package/contents/ui/main.qml:207
+msgid "Brightness"
+msgstr "Jasność"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:248
 msgid "Gamma"
 msgstr "Gamma"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:196
-msgid "RGB:"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:252
+#, fuzzy
+msgid "R:"
 msgstr "RGB:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:231
+#: ../package/contents/ui/config/ConfigAdvanced.qml:287
+#, fuzzy
+msgid "G:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:322
+#, fuzzy
+msgid "B:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:354
 msgid "Mode"
 msgstr "Tryb"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:270
+#: ../package/contents/ui/config/ConfigAdvanced.qml:394
 msgid "Screen"
 msgstr "Ekran"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:276
+#: ../package/contents/ui/config/ConfigAdvanced.qml:403
 msgid "Card"
 msgstr "Karta"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:290
+#: ../package/contents/ui/config/ConfigAdvanced.qml:413
 msgid "CRTC"
 msgstr "CRTC"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:298
+#: ../package/contents/ui/config/ConfigAdvanced.qml:424
 msgid "Preserve screen colour"
 msgstr "Zachowaj kolor ekranu"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:306
+#: ../package/contents/ui/config/ConfigAdvanced.qml:436
 msgid "Insert custom mode options"
 msgstr "Wstaw własne opcje trybu"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:346
+#: ../package/contents/ui/config/ConfigAdvanced.qml:458
 msgid "Redshift version:"
 msgstr "Wersja %1:"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
+#: ../package/contents/ui/config/ConfigGeneral.qml:43
+msgid "Backend"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:61
+msgid "Autostart"
+msgstr "Automatyczne uruchamianie"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:66
+msgid "Smooth transitions"
+msgstr "Płynne przejścia"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:74
+msgid "Manual temperature step:"
+msgstr "Własny krok zmiany temperatury:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:109
+msgid "Manual brightness step:"
+msgstr "Własny krok zmiany temperatury:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:135
+msgid "Use default icons"
+msgstr "Użyj domyślnych ikon"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:140
+msgid "Active:"
+msgstr "Aktywne:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:149
+msgid "Inactive:"
+msgstr "Nieaktywne:"
+
+#: ../package/contents/ui/config/IconPicker.qml:81
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose..."
+msgstr "Wybierz..."
+
+#: ../package/contents/ui/config/IconPicker.qml:87
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Wyczyść ikonę"
+
+#: ../package/contents/ui/config/LocationsFixedView.qml:41
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "Dotknij, aby wskazać swoje miejsce na mapie."
 
-#: ui/LocationsFixedView.qml:73
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:42
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "Naciśnij, aby wskazać swoje miejsce na mapie."
 
-#: ui/LocationsFixedView.qml:112
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:82
 msgid "Zoom in"
 msgstr "Powiększ"
 
-#: ui/LocationsFixedView.qml:128
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#: ../package/contents/ui/config/LocationsFixedView.qml:107
+#, fuzzy
 msgid "Zoom out"
 msgstr "Powiększ"
 
-#: ui/LocationsFixedView.qml:225
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"Dostosowane z <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>mapy ustalania położenia na "
-"świecie</link> autorstwa TUBS / Wikimedia Commons / <link url='https://"
-"creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#: ../package/contents/ui/config/LocationsFixedView.qml:226
+msgid "Latitude:"
+msgstr "Szerokość geograficzna:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:21
-msgid "Plasmoid version"
-msgstr "Wersja plazmoida"
+#: ../package/contents/ui/config/LocationsFixedView.qml:240
+msgid "Longitude:"
+msgstr "Długość geograficzna:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:31
-msgid "Autostart"
-msgstr "Automatyczne uruchamianie"
+#: ../package/contents/ui/main.qml:74
+msgid "Redshift Control"
+msgstr "Sterowanie Redshift"
 
-#: package/contents/ui/config/ConfigGeneral.qml:37
-msgid "Smooth transitions"
-msgstr "Płynne przejścia"
-
-#: package/contents/ui/config/ConfigGeneral.qml:48
-msgid "Manual temperature step:"
-msgstr "Własny krok zmiany temperatury:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:61
-msgid "Manual brightness step:"
-msgstr "Własny krok zmiany temperatury:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:81
-msgid "Use default icons"
-msgstr "Użyj domyślnych ikon"
-
-#: package/contents/ui/config/ConfigGeneral.qml:86
-msgid "Active:"
-msgstr "Aktywne:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:99
-msgid "Inactive:"
-msgstr "Nieaktywne:"
-
-#: package/contents/ui/config/IconPicker.qml:73
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr "Wybierz..."
-
-#: package/contents/ui/config/IconPicker.qml:78
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Wyczyść ikonę"
-
-#: package/contents/ui/main.qml:190
+#: ../package/contents/ui/main.qml:204
 msgid "Turned on"
 msgstr "Włączony"
 
-#: package/contents/ui/main.qml:193
+#: ../package/contents/ui/main.qml:207
 msgid "Manual temperature"
 msgstr "Własna temperatura"
 
-#: package/contents/ui/main.qml:195
+#: ../package/contents/ui/main.qml:209
 msgid "Turned off"
 msgstr "Wyłączony"
 
-#: package/contents/ui/main.qml:200
+#: ../package/contents/ui/main.qml:214
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
 "Użyj kliknięcia lewym / środkowym klawiszem myszy, aby dostosować "
 "temperaturę i jasność ekranu"
 
-#: package/contents/ui/main.qml:203
+#: ../package/contents/ui/main.qml:217
 msgid "Mouse wheel controls software brightness"
 msgstr "Kółko myszy ustawia jasność oprogramowania"
 
-#: package/contents/ui/main.qml:205
+#: ../package/contents/ui/main.qml:219
 msgid "Mouse wheel controls screen temperature"
 msgstr "Kółko myszy ustawia temperaturę ekranu"
 
-#: package/contents/ui/main.qml:229
-msgid "Redshift Control"
-msgstr "Sterowanie Redshift"
+#~ msgid "This will use Mozilla Location Service exposed natively in KDE"
+#~ msgstr "Zostaną wykorzystane Usługi Lokalizacji Mozilli"
+
+#, kde-kuit-format
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "Dostosowane z <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>mapy ustalania położenia na "
+#~ "świecie</link> autorstwa TUBS / Wikimedia Commons / <link url='https://"
+#~ "creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+
+#~ msgid "Plasmoid version"
+#~ msgstr "Wersja plazmoida"

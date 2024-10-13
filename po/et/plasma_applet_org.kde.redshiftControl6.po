@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma6-redshift-control\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-09 00:48+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 20:49+0300\n"
 "PO-Revision-Date: 2024-10-13 19:08+0300\n"
 "Last-Translator: Evgeniy Harchenko <evgeniyharchenko.dev@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -18,197 +18,195 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.1\n"
 
-#: package/contents/config/config.qml:11
+#: ../package/contents/config/config.qml:11
 msgid "General"
 msgstr "Üldine"
 
-#: package/contents/config/config.qml:16
+#: ../package/contents/config/config.qml:16
 msgid "Advanced"
 msgstr "Muu"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:63
+#: ../package/contents/ui/config/ConfigAdvanced.qml:77
 msgid "Location"
 msgstr "Asukoht"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:69
+#: ../package/contents/ui/config/ConfigAdvanced.qml:82
 msgid "Automatic (geoclue)"
 msgstr "Automaatne (geoclue)"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:73
-msgid "Latitude:"
-msgstr "Laiuskraad:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:89
+#: ../package/contents/ui/config/ConfigAdvanced.qml:86
 msgid "Locate"
 msgstr "Leia asukoht"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:90
-msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "See võimaldab kasutada KDEs Mozilla asukohateenust"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:101
-msgid "Longitude:"
-msgstr "Pikkuskraad:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:123
+#: ../package/contents/ui/config/ConfigAdvanced.qml:138
 msgid "Temperature"
 msgstr "Temperatuur"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:128
-#: package/contents/ui/main.qml:193
-msgid "Brightness"
-msgstr "Heledus"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:134
-#: package/contents/ui/config/ConfigAdvanced.qml:147
+#: ../package/contents/ui/config/ConfigAdvanced.qml:142
+#: ../package/contents/ui/config/ConfigAdvanced.qml:194
 msgid "Day:"
 msgstr "Päev:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:160
-#: package/contents/ui/config/ConfigAdvanced.qml:173
+#: ../package/contents/ui/config/ConfigAdvanced.qml:168
+#: ../package/contents/ui/config/ConfigAdvanced.qml:223
 msgid "Night:"
 msgstr "Öö:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:191
+#: ../package/contents/ui/config/ConfigAdvanced.qml:190
+#: ../package/contents/ui/main.qml:207
+msgid "Brightness"
+msgstr "Heledus"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:248
 msgid "Gamma"
 msgstr "Gamma"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:196
-msgid "RGB:"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:252
+#, fuzzy
+msgid "R:"
 msgstr "RGB:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:231
+#: ../package/contents/ui/config/ConfigAdvanced.qml:287
+#, fuzzy
+msgid "G:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:322
+#, fuzzy
+msgid "B:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:354
 msgid "Mode"
 msgstr "Režiim"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:270
+#: ../package/contents/ui/config/ConfigAdvanced.qml:394
 msgid "Screen"
 msgstr "Ekraan"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:276
+#: ../package/contents/ui/config/ConfigAdvanced.qml:403
 msgid "Card"
 msgstr "Kaart"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:290
+#: ../package/contents/ui/config/ConfigAdvanced.qml:413
 msgid "CRTC"
 msgstr "CRTC"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:298
+#: ../package/contents/ui/config/ConfigAdvanced.qml:424
 msgid "Preserve screen colour"
 msgstr "Ekraanivärvi säilitamine"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:306
+#: ../package/contents/ui/config/ConfigAdvanced.qml:436
 msgid "Insert custom mode options"
 msgstr "Lisa kohandatud režiimi valikud"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:346
+#: ../package/contents/ui/config/ConfigAdvanced.qml:458
 #, fuzzy
-#| msgid "Redshift version"
 msgid "Redshift version:"
 msgstr "%1i versioon"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
+#: ../package/contents/ui/config/ConfigGeneral.qml:43
+msgid "Backend"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:61
+msgid "Autostart"
+msgstr "Automaatne käivitus"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:66
+msgid "Smooth transitions"
+msgstr "Sujuvad üleminekud"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:74
+msgid "Manual temperature step:"
+msgstr "Käsitsi temperatuurisamm:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:109
+msgid "Manual brightness step:"
+msgstr "Käsitsi heledusesamm:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:135
+msgid "Use default icons"
+msgstr "Vaikimisi ikoonide kasutamine"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:140
+msgid "Active:"
+msgstr "Aktiivne:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:149
+msgid "Inactive:"
+msgstr "Mitteaktiivne:"
+
+#: ../package/contents/ui/config/IconPicker.qml:81
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose..."
+msgstr "Vali ..."
+
+#: ../package/contents/ui/config/IconPicker.qml:87
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Puhasta ikoon"
+
+#: ../package/contents/ui/config/LocationsFixedView.qml:41
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:73
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:42
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:112
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:82
 msgid "Zoom in"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:128
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:107
 msgid "Zoom out"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:225
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
+#: ../package/contents/ui/config/LocationsFixedView.qml:226
+msgid "Latitude:"
+msgstr "Laiuskraad:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:21
-msgid "Plasmoid version"
-msgstr "Plasmoidi versioon"
+#: ../package/contents/ui/config/LocationsFixedView.qml:240
+msgid "Longitude:"
+msgstr "Pikkuskraad:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:31
-msgid "Autostart"
-msgstr "Automaatne käivitus"
+#: ../package/contents/ui/main.qml:74
+msgid "Redshift Control"
+msgstr "Redshifti juhtimine"
 
-#: package/contents/ui/config/ConfigGeneral.qml:37
-msgid "Smooth transitions"
-msgstr "Sujuvad üleminekud"
-
-#: package/contents/ui/config/ConfigGeneral.qml:48
-msgid "Manual temperature step:"
-msgstr "Käsitsi temperatuurisamm:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:61
-msgid "Manual brightness step:"
-msgstr "Käsitsi heledusesamm:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:81
-msgid "Use default icons"
-msgstr "Vaikimisi ikoonide kasutamine"
-
-#: package/contents/ui/config/ConfigGeneral.qml:86
-msgid "Active:"
-msgstr "Aktiivne:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:99
-msgid "Inactive:"
-msgstr "Mitteaktiivne:"
-
-#: package/contents/ui/config/IconPicker.qml:73
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr "Vali ..."
-
-#: package/contents/ui/config/IconPicker.qml:78
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr "Puhasta ikoon"
-
-#: package/contents/ui/main.qml:190
+#: ../package/contents/ui/main.qml:204
 msgid "Turned on"
 msgstr "Sisse lülitatud"
 
-#: package/contents/ui/main.qml:193
+#: ../package/contents/ui/main.qml:207
 msgid "Manual temperature"
 msgstr "Käsitsi temperatuur"
 
-#: package/contents/ui/main.qml:195
+#: ../package/contents/ui/main.qml:209
 msgid "Turned off"
 msgstr "Välja lülitatud"
 
-#: package/contents/ui/main.qml:200
+#: ../package/contents/ui/main.qml:214
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
 "Vasak- ja keskklõpsuga ning hiirerattaga saab muuta temperatuuri ja heledust"
 
-#: package/contents/ui/main.qml:203
+#: ../package/contents/ui/main.qml:217
 msgid "Mouse wheel controls software brightness"
 msgstr "Hiireratas juhib tarkvaralist heledust"
 
-#: package/contents/ui/main.qml:205
+#: ../package/contents/ui/main.qml:219
 msgid "Mouse wheel controls screen temperature"
 msgstr "Hiireratas juhib ekraani temperatuuri"
 
-#: package/contents/ui/main.qml:229
-msgid "Redshift Control"
-msgstr "Redshifti juhtimine"
+#~ msgid "This will use Mozilla Location Service exposed natively in KDE"
+#~ msgstr "See võimaldab kasutada KDEs Mozilla asukohateenust"
+
+#~ msgid "Plasmoid version"
+#~ msgstr "Plasmoidi versioon"

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-10-23 02:33+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-13 20:49+0300\n"
 "PO-Revision-Date: 2016-03-27 01:37+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -14,200 +14,200 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/config/config.qml:22
+#: ../package/contents/config/config.qml:11
 msgid "General"
 msgstr "Opšte"
 
-#: package/contents/config/config.qml:27
+#: ../package/contents/config/config.qml:16
 msgid "Advanced"
 msgstr "Napredno"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:74
+#: ../package/contents/ui/config/ConfigAdvanced.qml:77
 msgid "Location"
 msgstr "Lokacija"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:80
+#: ../package/contents/ui/config/ConfigAdvanced.qml:82
 msgid "Automatic (geoclue)"
 msgstr "Automatski (geoclue)"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:84
-msgid "Latitude:"
-msgstr "Dužina:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:100
+#: ../package/contents/ui/config/ConfigAdvanced.qml:86
 msgid "Locate"
 msgstr "Lociraj"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:101
-msgid "This will use Mozilla Location Service exposed natively in KDE"
-msgstr "Ovo će da koristi Mozilinu uslugu lokacije ugrađenu u KDE"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:112
-msgid "Longitude:"
-msgstr "Širina:"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:134
+#: ../package/contents/ui/config/ConfigAdvanced.qml:138
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:139
-#: package/contents/ui/main.qml:204
-msgid "Brightness"
-msgstr "Osvetljenje"
-
-#: package/contents/ui/config/ConfigAdvanced.qml:145
-#: package/contents/ui/config/ConfigAdvanced.qml:158
+#: ../package/contents/ui/config/ConfigAdvanced.qml:142
+#: ../package/contents/ui/config/ConfigAdvanced.qml:194
 msgid "Day:"
 msgstr "Dan:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:171
-#: package/contents/ui/config/ConfigAdvanced.qml:184
+#: ../package/contents/ui/config/ConfigAdvanced.qml:168
+#: ../package/contents/ui/config/ConfigAdvanced.qml:223
 msgid "Night:"
 msgstr "Noć:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:202
+#: ../package/contents/ui/config/ConfigAdvanced.qml:190
+#: ../package/contents/ui/main.qml:207
+msgid "Brightness"
+msgstr "Osvetljenje"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:248
 msgid "Gamma"
 msgstr "Gama"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:207
-msgid "RGB:"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:252
+#, fuzzy
+msgid "R:"
 msgstr "RGB:"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:242
+#: ../package/contents/ui/config/ConfigAdvanced.qml:287
+#, fuzzy
+msgid "G:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:322
+#, fuzzy
+msgid "B:"
+msgstr "RGB:"
+
+#: ../package/contents/ui/config/ConfigAdvanced.qml:354
 msgid "Mode"
 msgstr "Režim"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:281
+#: ../package/contents/ui/config/ConfigAdvanced.qml:394
 msgid "Screen"
 msgstr "Ekran"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:287
+#: ../package/contents/ui/config/ConfigAdvanced.qml:403
 msgid "Card"
 msgstr "Karta"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:301
+#: ../package/contents/ui/config/ConfigAdvanced.qml:413
 msgid "CRTC"
 msgstr "CRTC"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:309
+#: ../package/contents/ui/config/ConfigAdvanced.qml:424
 msgid "Preserve screen colour"
 msgstr "Očuvaj boju ekrana"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:317
+#: ../package/contents/ui/config/ConfigAdvanced.qml:436
 msgid "Insert custom mode options"
 msgstr "Umetnite opcije prilagođenog režima"
 
-#: package/contents/ui/config/ConfigAdvanced.qml:357
-msgid "Redshift version"
+#: ../package/contents/ui/config/ConfigAdvanced.qml:458
+#, fuzzy
+msgid "Redshift version:"
 msgstr "Izdanje crvenog pomaka"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
+#: ../package/contents/ui/config/ConfigGeneral.qml:43
+msgid "Backend"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:61
+msgid "Autostart"
+msgstr "Autopokretanje"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:66
+msgid "Smooth transitions"
+msgstr "Glatki prelazi"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:74
+msgid "Manual temperature step:"
+msgstr "Ručni korak temperature:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:109
+msgid "Manual brightness step:"
+msgstr "Ručni korak temperature:"
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:135
+msgid "Use default icons"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:140
+msgid "Active:"
+msgstr ""
+
+#: ../package/contents/ui/config/ConfigGeneral.qml:149
+msgid "Inactive:"
+msgstr ""
+
+#: ../package/contents/ui/config/IconPicker.qml:81
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose..."
+msgstr ""
+
+#: ../package/contents/ui/config/IconPicker.qml:87
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr ""
+
+#: ../package/contents/ui/config/LocationsFixedView.qml:41
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:73
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:42
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:112
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:82
 msgid "Zoom in"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:128
-#, kde-format
+#: ../package/contents/ui/config/LocationsFixedView.qml:107
 msgid "Zoom out"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:225
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
+#: ../package/contents/ui/config/LocationsFixedView.qml:226
+msgid "Latitude:"
+msgstr "Dužina:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:32
-msgid "Plasmoid version"
-msgstr "Izdanje plazmoida"
+#: ../package/contents/ui/config/LocationsFixedView.qml:240
+msgid "Longitude:"
+msgstr "Širina:"
 
-#: package/contents/ui/config/ConfigGeneral.qml:42
-msgid "Autostart"
-msgstr "Autopokretanje"
+#: ../package/contents/ui/main.qml:74
+msgid "Redshift Control"
+msgstr "Kontrola crvenog pomaka"
 
-#: package/contents/ui/config/ConfigGeneral.qml:48
-msgid "Smooth transitions"
-msgstr "Glatki prelazi"
-
-#: package/contents/ui/config/ConfigGeneral.qml:59
-msgid "Manual temperature step:"
-msgstr "Ručni korak temperature:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:72
-msgid "Manual brightness step:"
-msgstr "Ručni korak temperature:"
-
-#: package/contents/ui/config/ConfigGeneral.qml:92
-msgid "Use default icons"
-msgstr ""
-
-#: package/contents/ui/config/ConfigGeneral.qml:97
-msgid "Active:"
-msgstr ""
-
-#: package/contents/ui/config/ConfigGeneral.qml:110
-msgid "Inactive:"
-msgstr ""
-
-#: package/contents/ui/config/IconPicker.qml:84
-msgctxt "@item:inmenu Open icon chooser dialog"
-msgid "Choose..."
-msgstr ""
-
-#: package/contents/ui/config/IconPicker.qml:89
-msgctxt "@item:inmenu Reset icon to default"
-msgid "Clear Icon"
-msgstr ""
-
-#: package/contents/ui/main.qml:201
+#: ../package/contents/ui/main.qml:204
 msgid "Turned on"
 msgstr "Uključena"
 
-#: package/contents/ui/main.qml:204
+#: ../package/contents/ui/main.qml:207
 msgid "Manual temperature"
 msgstr "Ručna temperatura"
 
-#: package/contents/ui/main.qml:206
+#: ../package/contents/ui/main.qml:209
 msgid "Turned off"
 msgstr "Isključena"
 
-#: package/contents/ui/main.qml:211
+#: ../package/contents/ui/main.qml:214
 msgid ""
 "Use left / middle click and wheel to manage screen temperature and brightness"
 msgstr ""
 
-#: package/contents/ui/main.qml:214
+#: ../package/contents/ui/main.qml:217
 msgid "Mouse wheel controls software brightness"
 msgstr ""
 
-#: package/contents/ui/main.qml:216
+#: ../package/contents/ui/main.qml:219
 msgid "Mouse wheel controls screen temperature"
 msgstr ""
 
-#: package/contents/ui/main.qml:240
-msgid "Redshift Control"
-msgstr "Kontrola crvenog pomaka"
+#~ msgid "This will use Mozilla Location Service exposed natively in KDE"
+#~ msgstr "Ovo će da koristi Mozilinu uslugu lokacije ugrađenu u KDE"
+
+#~ msgid "Plasmoid version"
+#~ msgstr "Izdanje plazmoida"
