@@ -110,7 +110,7 @@ Item {
 
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton
 
-        onWheel: {
+        onWheel: (wheel)=> {
             if (!manualEnabled) {
                 manualTemperature = currentTemperature
                 manualBrightness = currentBrightness
@@ -158,7 +158,7 @@ Item {
             }
         }
 
-        onClicked: {
+        onClicked: (mouse)=> {
             if (mouse.button === Qt.MiddleButton) {
                 manualEnabledBrightness = !manualEnabledBrightness
                 updateTooltip()
