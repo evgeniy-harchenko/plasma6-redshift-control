@@ -38,7 +38,13 @@ KCM.SimpleKCM {
 
     onCfg_renderModeChanged: {
         print('restore: ' + cfg_renderMode)
-        var comboIndex = modeCombo.find(cfg_renderMode)
+        var comboIndex = 0 //modeCombo.find(cfg_renderMode)
+        for(var i = 0; i < modeCombo.model.count; ++i) {
+            if (modeCombo.model.get(i).val === cfg_renderMode) {
+                comboIndex = i
+                break
+            }
+        }
         print('restore index: ' + comboIndex)
         if (comboIndex > -1) {
             modeCombo.currentIndex = comboIndex
